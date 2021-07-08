@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using NBitcoin;
 
 namespace Bitcoin_Dashboard
 {
@@ -15,6 +18,16 @@ namespace Bitcoin_Dashboard
         public Page2()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            JsonSerializerSettings jsonSettings = new JsonSerializerSettings();
+            NBitcoin.JsonConverters.Serializer.RegisterFrontConverters(jsonSettings, Network.TestNet);
+
+            Transactions deserialized = JsonConvert.DeserializeObject<Transactions>(BitcoinToolbox.getMempoolTransactions(), jsonSettings);
+            Console.WriteLine(deserialized.Out[0].Value);
+
         }
     }
 }

@@ -183,9 +183,11 @@
             this.page21.Name = "page21";
             this.page21.Size = new System.Drawing.Size(739, 558);
             this.page21.TabIndex = 5;
+            this.page21.Load += new System.EventHandler(this.page21_Load);
             // 
             // userControl11
             // 
+            this.userControl11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.userControl11.Location = new System.Drawing.Point(191, 68);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControl11.Name = "userControl11";

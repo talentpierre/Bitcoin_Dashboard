@@ -154,8 +154,15 @@ namespace Bitcoin_Dashboard
 
         private void button1_Click(object sender, EventArgs e)
         {
+            activeSidebarPanel.Location = new Point(5, button1.Location.Y + 5);
+
             userControl11.Show();
             page21.Hide();
+        }
+
+        private void page21_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
