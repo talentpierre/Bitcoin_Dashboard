@@ -62,25 +62,25 @@ namespace Bitcoin_Dashboard
             TopPanel.BackColor = Color.FromArgb(76, 75, 105);
             LeftPanel.BackColor = Color.FromArgb(50, 49, 65);
             
-            button1.BackColor = Color.FromArgb(50, 49, 65);
-            button1.ForeColor = Color.White;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
+            btnHardware.BackColor = Color.FromArgb(50, 49, 65);
+            btnHardware.ForeColor = Color.White;
+            btnHardware.FlatStyle = FlatStyle.Flat;
+            btnHardware.FlatAppearance.BorderSize = 0;
 
-            button2.BackColor = Color.FromArgb(50, 49, 65);
-            button2.ForeColor = Color.White;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.FlatAppearance.BorderSize = 0;
+            btnBlocksuche.BackColor = Color.FromArgb(50, 49, 65);
+            btnBlocksuche.ForeColor = Color.White;
+            btnBlocksuche.FlatStyle = FlatStyle.Flat;
+            btnBlocksuche.FlatAppearance.BorderSize = 0;
 
-            button3.BackColor = Color.FromArgb(50, 49, 65);
-            button3.ForeColor = Color.White;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.FlatAppearance.BorderSize = 0;
+            btnFees.BackColor = Color.FromArgb(50, 49, 65);
+            btnFees.ForeColor = Color.White;
+            btnFees.FlatStyle = FlatStyle.Flat;
+            btnFees.FlatAppearance.BorderSize = 0;
 
-            button4.BackColor = Color.FromArgb(50, 49, 65);
-            button4.ForeColor = Color.White;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.FlatAppearance.BorderSize = 0;
+            btnChange.BackColor = Color.FromArgb(50, 49, 65);
+            btnChange.ForeColor = Color.White;
+            btnChange.FlatStyle = FlatStyle.Flat;
+            btnChange.FlatAppearance.BorderSize = 0;
 
             button5.BackColor = Color.FromArgb(76, 75, 105);
             button5.ForeColor = Color.White;
@@ -89,7 +89,10 @@ namespace Bitcoin_Dashboard
             
             BitcoinToolbox.InitializeRPC();
             
-            page21.Hide();
+
+            userControl11.Hide();
+            userControl21.Hide();
+            userControl31.Hide();
             
         }
 
@@ -133,13 +136,12 @@ namespace Bitcoin_Dashboard
 
         private void button2_Click(object sender, EventArgs e)
         {
-            activeSidebarPanel.Location = new Point(5, button2.Location.Y + 5);
+            activeSidebarPanel.Location = new Point(5, btnBlocksuche.Location.Y + 5);
 
-            page21.Show();
-            userControl11.Hide();
-         
-
-            
+            userControl11.Show();
+            page21.Hide();
+            userControl21.Hide();
+            userControl31.Hide();
         }
 
         private void page11_Load(object sender, EventArgs e)
@@ -154,13 +156,33 @@ namespace Bitcoin_Dashboard
 
         private void button1_Click(object sender, EventArgs e)
         {
-            activeSidebarPanel.Location = new Point(5, button1.Location.Y + 5);
 
-            userControl11.Show();
+            activeSidebarPanel.Location = new Point(5, btnHardware.Location.Y + 5);
+            page21.Show();
+            userControl11.Hide();
+            userControl21.Hide();
+            userControl31.Hide();
+        }
+
+        private void btnFees_Click(object sender, EventArgs e)
+        {
+            activeSidebarPanel.Location = new Point(5, btnFees.Location.Y + 5);
+            userControl21.Show();
+            userControl11.Hide();
+            page21.Hide();
+            userControl31.Hide();
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            activeSidebarPanel.Location = new Point(5, btnChange.Location.Y + 5);
+            userControl11.Hide();
+            userControl21.Hide();
+            userControl31.Show();
             page21.Hide();
         }
 
-        private void page21_Load(object sender, EventArgs e)
+        private void userControl21_Load(object sender, EventArgs e)
         {
 
         }

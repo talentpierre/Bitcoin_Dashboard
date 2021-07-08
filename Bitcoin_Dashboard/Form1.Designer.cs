@@ -33,16 +33,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnFees = new System.Windows.Forms.Button();
+            this.btnBlocksuche = new System.Windows.Forms.Button();
+            this.btnHardware = new System.Windows.Forms.Button();
             this.activeSidebarPanel = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.page21 = new Bitcoin_Dashboard.Page2();
             this.userControl11 = new Bitcoin_Dashboard.UserControl1();
+            this.userControl31 = new Bitcoin_Dashboard.UserControl3();
+            this.userControl21 = new Bitcoin_Dashboard.UserControl2();
             this.TopPanel.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +62,7 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(877, 16);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(35, 35);
@@ -72,10 +74,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 33);
+            this.label1.Size = new System.Drawing.Size(275, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bitcoin Node Explorer";
             // 
@@ -83,10 +85,10 @@
             // 
             this.LeftPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LeftPanel.Controls.Add(this.panel1);
-            this.LeftPanel.Controls.Add(this.button4);
-            this.LeftPanel.Controls.Add(this.button3);
-            this.LeftPanel.Controls.Add(this.button2);
-            this.LeftPanel.Controls.Add(this.button1);
+            this.LeftPanel.Controls.Add(this.btnChange);
+            this.LeftPanel.Controls.Add(this.btnFees);
+            this.LeftPanel.Controls.Add(this.btnBlocksuche);
+            this.LeftPanel.Controls.Add(this.btnHardware);
             this.LeftPanel.Controls.Add(this.activeSidebarPanel);
             this.LeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftPanel.Location = new System.Drawing.Point(0, 68);
@@ -101,51 +103,53 @@
             this.panel1.Size = new System.Drawing.Size(700, 470);
             this.panel1.TabIndex = 5;
             // 
-            // button4
+            // btnChange
             // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(15, 195);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 45);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "___Wechselkurs";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Location = new System.Drawing.Point(15, 195);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(170, 45);
+            this.btnChange.TabIndex = 6;
+            this.btnChange.Text = "___Wechselkurs";
+            this.btnChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
-            // button3
+            // btnFees
             // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(15, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 45);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "___Fees";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFees.Location = new System.Drawing.Point(15, 145);
+            this.btnFees.Name = "btnFees";
+            this.btnFees.Size = new System.Drawing.Size(170, 45);
+            this.btnFees.TabIndex = 5;
+            this.btnFees.Text = "___Fees";
+            this.btnFees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFees.UseVisualStyleBackColor = true;
+            this.btnFees.Click += new System.EventHandler(this.btnFees_Click);
             // 
-            // button2
+            // btnBlocksuche
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(15, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 45);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "___Blocksuche";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBlocksuche.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlocksuche.Location = new System.Drawing.Point(15, 95);
+            this.btnBlocksuche.Name = "btnBlocksuche";
+            this.btnBlocksuche.Size = new System.Drawing.Size(170, 45);
+            this.btnBlocksuche.TabIndex = 4;
+            this.btnBlocksuche.Text = "___Blocksuche";
+            this.btnBlocksuche.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBlocksuche.UseVisualStyleBackColor = true;
+            this.btnBlocksuche.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnHardware
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(15, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "___Hardware Details";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnHardware.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHardware.Location = new System.Drawing.Point(15, 45);
+            this.btnHardware.Name = "btnHardware";
+            this.btnHardware.Size = new System.Drawing.Size(170, 45);
+            this.btnHardware.TabIndex = 3;
+            this.btnHardware.Text = "___Hardware Details";
+            this.btnHardware.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHardware.UseVisualStyleBackColor = true;
+            this.btnHardware.Click += new System.EventHandler(this.button1_Click);
             // 
             // activeSidebarPanel
             // 
@@ -171,19 +175,17 @@
             this.label2.ForeColor = System.Drawing.Color.Lime;
             this.label2.Location = new System.Drawing.Point(483, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
             // page21
             // 
             this.page21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.page21.Location = new System.Drawing.Point(191, 65);
-            this.page21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.page21.Location = new System.Drawing.Point(191, 68);
             this.page21.Name = "page21";
-            this.page21.Size = new System.Drawing.Size(739, 558);
+            this.page21.Size = new System.Drawing.Size(742, 558);
             this.page21.TabIndex = 5;
-            this.page21.Load += new System.EventHandler(this.page21_Load);
             // 
             // userControl11
             // 
@@ -194,20 +196,39 @@
             this.userControl11.Size = new System.Drawing.Size(742, 558);
             this.userControl11.TabIndex = 4;
             // 
+            // userControl31
+            // 
+            this.userControl31.BackColor = System.Drawing.Color.OrangeRed;
+            this.userControl31.Location = new System.Drawing.Point(191, 68);
+            this.userControl31.Name = "userControl31";
+            this.userControl31.Size = new System.Drawing.Size(742, 558);
+            this.userControl31.TabIndex = 6;
+            // 
+            // userControl21
+            // 
+            this.userControl21.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.userControl21.Location = new System.Drawing.Point(191, 68);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(742, 558);
+            this.userControl21.TabIndex = 7;
+            this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
+            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(933, 626);
             this.ControlBox = false;
+            this.Controls.Add(this.userControl21);
+            this.Controls.Add(this.userControl31);
             this.Controls.Add(this.page21);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.LeftPanel);
             this.Controls.Add(this.TopPanel);
-            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -228,10 +249,10 @@
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Panel LeftPanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Button btnFees;
+        private System.Windows.Forms.Button btnBlocksuche;
+        private System.Windows.Forms.Button btnHardware;
         private System.Windows.Forms.Panel activeSidebarPanel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
@@ -240,6 +261,8 @@
         private System.Windows.Forms.Label label2;
         private UserControl1 userControl11;
         private Page2 page21;
+        private UserControl3 userControl31;
+        private UserControl2 userControl21;
     }
 }
 
