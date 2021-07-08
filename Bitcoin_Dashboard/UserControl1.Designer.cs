@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,19 +41,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(418, 106);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(28, 317);
+            this.button1.Location = new System.Drawing.Point(460, 180);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -63,7 +52,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(530, 107);
+            this.button2.Location = new System.Drawing.Point(21, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -182,7 +171,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(631, 477);
             this.Load += new System.EventHandler(this.UserControl1_Load);
@@ -192,8 +180,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
