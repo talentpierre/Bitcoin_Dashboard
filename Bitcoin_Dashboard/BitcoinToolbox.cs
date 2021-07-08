@@ -15,13 +15,7 @@ namespace Bitcoin_Dashboard
 {
     public class BitcoinToolbox
     {
-
-
-        //"192.168.193.10:18332"
-        //"pida:DxJ29FSOx75Z1foEc"
-
-
-        
+       
         public static Network network = Network.TestNet;
         public static string rpcHost;
         public static string rpcCredentials;
