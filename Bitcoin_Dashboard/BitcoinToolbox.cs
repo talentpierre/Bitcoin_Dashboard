@@ -67,9 +67,12 @@ namespace Bitcoin_Dashboard
             foreach (uint256 i in mempooldump)
             {
                 tx[j] = rpcclient.GetRawTransaction(mempooldump[j]);
+                j++;
+                
             }
 
-            return Convert.ToString(rpcclient.DecodeRawTransaction(tx[j].ToHex()));
+            Console.WriteLine(tx.Length);
+            return Convert.ToString(rpcclient.DecodeRawTransaction(tx[0].ToHex()));
             
         }
 
