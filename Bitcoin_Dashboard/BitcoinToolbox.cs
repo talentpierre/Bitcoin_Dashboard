@@ -55,24 +55,32 @@ namespace Bitcoin_Dashboard
         }
 
         
-        public static string getMempoolTransactions()
+        public static List<string> getMempoolTransactions()
         {
             var mempool_dump = rpcclient.GetRawMempool();
             Console.WriteLine(mempool_dump.Length);
 
             NBitcoin.uint256[] mempooldump = rpcclient.GetRawMempool();
-            NBitcoin.Transaction[] tx = new Transaction[1000000];
-            int j = 0;
+
+            List <NBitcoin.Transaction> tx = new List<Transaction>();
+            
 
             foreach (uint256 i in mempooldump)
             {
-                tx[j] = rpcclient.GetRawTransaction(mempooldump[j]);
-                j++;
-                
+                Console.WriteLine(i);
+                tx.Add(rpcclient.GetRawTransaction(i));
+  
             }
 
-            Console.WriteLine(tx.Length);
-            return Convert.ToString(rpcclient.DecodeRawTransaction(tx[0].ToHex()));
+            List<string> decodedTx = new List<string>();
+
+            foreach (var item in tx)
+            {
+                decodedTx.Add(Convert.ToString(rpcclient.DecodeRawTransaction(item.ToHex())));
+            }
+
+
+            return decodedTx;
             
         }
 
