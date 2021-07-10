@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Renci.SshNet;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace Bitcoin_Dashboard
 {
@@ -15,6 +16,7 @@ namespace Bitcoin_Dashboard
         private static string userName;
         private static string passwd;
         private static string sshHost;
+        private static bool exist = true;
 
         static SshClient sshc;
 
@@ -23,18 +25,30 @@ namespace Bitcoin_Dashboard
             if (Directory.Exists("credentials/ssh/") == false)
             {
                 Directory.CreateDirectory("credentials/ssh/");
+                exist = false;
             }
             if (File.Exists("credentials/ssh/sshUser.txt") == false)
             {
                 File.Create("credentials/ssh/sshUser.txt");
+                exist = false;
             }
             if (File.Exists("credentials/ssh/sshHost.txt") == false)
             {
                 File.Create("credentials/ssh/sshHost.txt");
+                exist = false;
             }
             if (File.Exists("credentials/ssh/sshPasswd.txt") == false)
             {
                 File.Create("credentials/ssh/sshPasswd.txt");
+                exist = false;
+            }
+
+            if (exist == false)
+            {
+                MessageBox.Show("Bitte gib deine SSH Daten im credentials Ordner ein");
+               Thread.Sleep(1200);
+                Application.Exit();
+                Environment.Exit(0);
             }
 
             Thread.Sleep(1200);
@@ -42,6 +56,14 @@ namespace Bitcoin_Dashboard
             userName = File.ReadAllText("credentials/ssh/sshUser.txt");
             sshHost = File.ReadAllText("credentials/ssh/sshHost.txt");
             passwd = File.ReadAllText("credentials/ssh/sshPasswd.txt");
+
+            if (userName == null || passwd == null || sshHost == null)
+            {
+                MessageBox.Show("Bitte gib deine SSH Daten im credentials Ordner ein");
+                Thread.Sleep(1200);
+                Application.Exit();
+                Environment.Exit(0);
+            }
 
             sshc = new SshClient(sshHost, userName, passwd);
             sshc.Connect();

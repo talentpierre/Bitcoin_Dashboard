@@ -44,6 +44,8 @@ namespace Bitcoin_Dashboard
 
         private void UserControl2_Load(object sender, EventArgs e)
         {
+            this.BackColor = Color.FromArgb(44, 43, 60);
+            chart1.BackColor = Color.FromArgb(44, 43, 60);
             
         }
 
@@ -142,6 +144,11 @@ namespace Bitcoin_Dashboard
             label1.Text = deserialized[0].Out[0].Value;
 
             fillChart();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,12 +15,13 @@ namespace Bitcoin_Dashboard
         public Page2()
         {
             InitializeComponent();
+            PiHardware.InitializePi();
         }
 
         private void Page2_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(44, 43, 60);
-            PiHardware.InitializePi();
+            
             
             
                 lblTemp.Text = Convert.ToString(PiHardware.GetTemp());

@@ -48,6 +48,7 @@ namespace Bitcoin_Dashboard
                 MessageBox.Show("Du hast keinen Host oder Credentials eingetragen!\nBitte mach das und versuche es erneut");
                 Thread.Sleep(1200);
                 Application.Exit();
+                Environment.Exit(0);
             }
 
             rpcclient = new RPCClient(rpcCredentials, rpcHost, Network.TestNet);

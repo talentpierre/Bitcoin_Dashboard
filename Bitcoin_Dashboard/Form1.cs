@@ -88,7 +88,6 @@ namespace Bitcoin_Dashboard
             button5.FlatAppearance.BorderSize = 0;
             
             BitcoinToolbox.InitializeRPC();
-            
 
             userControl11.Hide();
             userControl21.Hide();
