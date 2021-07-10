@@ -34,9 +34,9 @@ namespace Bitcoin_Dashboard
             int outputAnzahl3to10 = 0;
             int outputAnzahlGroesser10 = 0;
 
-            foreach (var item in mempoolTx)
+            foreach (string tx_json in mempoolTx)
             {
-                var tx = NBitcoin.JsonConverters.Serializer.ToObject<TransactionOutput>(item, Network.TestNet);
+                TransactionOutput tx = NBitcoin.JsonConverters.Serializer.ToObject<TransactionOutput>(tx_json, Network.TestNet);
                 deserialized.Add(tx);
 
                 switch (tx.Out.Count)
@@ -64,6 +64,8 @@ namespace Bitcoin_Dashboard
                     default:
                         break;
                 }
+
+                Console.WriteLine(tx_json);
 
             }
 

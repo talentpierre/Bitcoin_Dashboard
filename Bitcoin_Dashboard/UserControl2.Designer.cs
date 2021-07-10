@@ -86,7 +86,7 @@ namespace Bitcoin_Dashboard
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 202);
+            this.label3.Location = new System.Drawing.Point(288, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 4;
@@ -95,7 +95,7 @@ namespace Bitcoin_Dashboard
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(116, 202);
+            this.label4.Location = new System.Drawing.Point(357, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace Bitcoin_Dashboard
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(183, 202);
+            this.label5.Location = new System.Drawing.Point(424, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 13);
             this.label5.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace Bitcoin_Dashboard
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(261, 202);
+            this.label6.Location = new System.Drawing.Point(502, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace Bitcoin_Dashboard
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(340, 202);
+            this.label7.Location = new System.Drawing.Point(581, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 8;
@@ -131,7 +131,7 @@ namespace Bitcoin_Dashboard
             // labelOutput_Groesser10
             // 
             this.labelOutput_Groesser10.AutoSize = true;
-            this.labelOutput_Groesser10.Location = new System.Drawing.Point(340, 249);
+            this.labelOutput_Groesser10.Location = new System.Drawing.Point(581, 76);
             this.labelOutput_Groesser10.Name = "labelOutput_Groesser10";
             this.labelOutput_Groesser10.Size = new System.Drawing.Size(28, 13);
             this.labelOutput_Groesser10.TabIndex = 13;
@@ -140,7 +140,7 @@ namespace Bitcoin_Dashboard
             // labelOutput_3to10
             // 
             this.labelOutput_3to10.AutoSize = true;
-            this.labelOutput_3to10.Location = new System.Drawing.Point(261, 249);
+            this.labelOutput_3to10.Location = new System.Drawing.Point(502, 76);
             this.labelOutput_3to10.Name = "labelOutput_3to10";
             this.labelOutput_3to10.Size = new System.Drawing.Size(34, 13);
             this.labelOutput_3to10.TabIndex = 12;
@@ -149,7 +149,7 @@ namespace Bitcoin_Dashboard
             // labelOutput_2
             // 
             this.labelOutput_2.AutoSize = true;
-            this.labelOutput_2.Location = new System.Drawing.Point(183, 249);
+            this.labelOutput_2.Location = new System.Drawing.Point(424, 76);
             this.labelOutput_2.Name = "labelOutput_2";
             this.labelOutput_2.Size = new System.Drawing.Size(13, 13);
             this.labelOutput_2.TabIndex = 11;
@@ -158,7 +158,7 @@ namespace Bitcoin_Dashboard
             // labelOutput_1
             // 
             this.labelOutput_1.AutoSize = true;
-            this.labelOutput_1.Location = new System.Drawing.Point(116, 249);
+            this.labelOutput_1.Location = new System.Drawing.Point(357, 76);
             this.labelOutput_1.Name = "labelOutput_1";
             this.labelOutput_1.Size = new System.Drawing.Size(13, 13);
             this.labelOutput_1.TabIndex = 10;
@@ -167,7 +167,7 @@ namespace Bitcoin_Dashboard
             // labelOutput_0
             // 
             this.labelOutput_0.AutoSize = true;
-            this.labelOutput_0.Location = new System.Drawing.Point(47, 249);
+            this.labelOutput_0.Location = new System.Drawing.Point(288, 76);
             this.labelOutput_0.Name = "labelOutput_0";
             this.labelOutput_0.Size = new System.Drawing.Size(13, 13);
             this.labelOutput_0.TabIndex = 9;
