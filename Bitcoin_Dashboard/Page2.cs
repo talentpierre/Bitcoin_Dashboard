@@ -24,8 +24,8 @@ namespace Bitcoin_Dashboard
             
             
             
-                lblTemp.Text = Convert.ToString(PiHardware.GetTemp());
-                lblArmClock.Text = Convert.ToString(PiHardware.GetArmClock());
+                //lblTemp.Text = Convert.ToString(PiHardware.GetTemp());
+                //lblArmClock.Text = Convert.ToString(PiHardware.GetArmClock());
             
             
             
