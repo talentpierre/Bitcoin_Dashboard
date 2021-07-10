@@ -15,6 +15,18 @@ namespace Bitcoin_Dashboard
 {
     public partial class UserControl2 : UserControl
     {
+        private int outputAnzahl0 = 0;
+        private int outputAnzahl1 = 0;
+        private int outputAnzahl2 = 0;
+        private int outputAnzahl3to10 = 0;
+        private int outputAnzahlGroesser10 = 0;
+
+        private int inputAnzahl0 = 0;
+        private int inputAnzahl1 = 0;
+        private int inputAnzahl2 = 0;
+        private int inputAnzahl3to10 = 0;
+        private int inputAnzahlGroesser10 = 0;
+
         public UserControl2()
         {
             InitializeComponent();
@@ -22,17 +34,42 @@ namespace Bitcoin_Dashboard
 
         private void button1_Click(object sender, EventArgs e)
         {
+            analyzeTransactions();
+        }
 
-            List <string> mempoolTx = BitcoinToolbox.getMempoolTransactions();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void UserControl2_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void fillChart()
+        {
+            chart1.Series["Outputs"].Points.AddXY("0", outputAnzahl0);
+            chart1.Series["Outputs"].Points.AddXY("1", outputAnzahl1);
+            chart1.Series["Outputs"].Points.AddXY("2", outputAnzahl2);
+            chart1.Series["Outputs"].Points.AddXY("3 - 10", outputAnzahl3to10);
+            chart1.Series["Outputs"].Points.AddXY("10 - ...", outputAnzahlGroesser10);
+            
+
+            chart1.Series["Inputs"].Points.AddXY("0", inputAnzahl0);
+            chart1.Series["Inputs"].Points.AddXY("1", inputAnzahl1);
+            chart1.Series["Inputs"].Points.AddXY("2", inputAnzahl2);
+            chart1.Series["Inputs"].Points.AddXY("3 - 10", inputAnzahl3to10);
+            chart1.Series["Inputs"].Points.AddXY("10 - ...", inputAnzahlGroesser10);
+
+        }
+
+        public void analyzeTransactions()
+        {
+            List<string> mempoolTx = BitcoinToolbox.getMempoolTransactions();
             Console.WriteLine(mempoolTx[0]);
 
             List<TransactionOutput> deserialized = new List<TransactionOutput>();
-
-            int outputAnzahl0 = 0;
-            int outputAnzahl1 = 0;
-            int outputAnzahl2 = 0;
-            int outputAnzahl3to10 = 0;
-            int outputAnzahlGroesser10 = 0;
 
             foreach (string tx_json in mempoolTx)
             {
@@ -65,6 +102,31 @@ namespace Bitcoin_Dashboard
                         break;
                 }
 
+                switch (tx.In.Count)
+                {
+                    case 0:
+                        inputAnzahl0 += 1;
+                        break;
+
+                    case 1:
+                        inputAnzahl1 += 1;
+                        break;
+
+                    case 2:
+                        inputAnzahl2 += 1;
+                        break;
+
+                    case int n when (n <= 10 && n > 2):
+                        inputAnzahl3to10 += 1;
+                        break;
+
+                    case int n when (n > 10):
+                        inputAnzahlGroesser10 += 1;
+                        break;
+
+                    default:
+                        break;
+                }
                 Console.WriteLine(tx_json);
 
             }
@@ -76,11 +138,8 @@ namespace Bitcoin_Dashboard
             labelOutput_Groesser10.Text = Convert.ToString(outputAnzahlGroesser10);
 
             label1.Text = deserialized[0].Out[0].Value;
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
+            fillChart();
         }
     }
 }
