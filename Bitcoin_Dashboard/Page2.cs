@@ -16,5 +16,18 @@ namespace Bitcoin_Dashboard
         {
             InitializeComponent();
         }
+
+        private void Page2_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(44, 43, 60);
+            PiHardware.InitializePi();
+            
+            
+                lblTemp.Text = Convert.ToString(PiHardware.GetTemp());
+                lblArmClock.Text = Convert.ToString(PiHardware.GetArmClock());
+            
+            
+            
+        }
     }
 }
