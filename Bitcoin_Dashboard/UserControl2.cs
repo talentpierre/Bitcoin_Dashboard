@@ -46,14 +46,12 @@ namespace Bitcoin_Dashboard
         {
             fillArray(inputAnzahl);
             fillArray(outputAnzahl);
-            chart1.Titles.Add("Outputs and Inputs");
+            timer1.Start();
 
-            
         }
 
         private void fillChart()
         {
-           
 
             chart1.Series["Outputs"].Points.Clear();
             chart1.Series["Outputs"].Points.AddXY("0", outputAnzahl[0]);
@@ -70,16 +68,18 @@ namespace Bitcoin_Dashboard
             chart1.Series["Inputs"].Points.AddXY("3 - 10", inputAnzahl[3]);
             chart1.Series["Inputs"].Points.AddXY("10 - ...", inputAnzahl[4]);
 
-           
         }
 
         public void analyzeTransactions()
         {
-            fillArray(inputAnzahl);
-            fillArray(outputAnzahl);
+            for (int i = 0; i < 5; i++)
+            {
+                outputAnzahl[i] = 0;
+                inputAnzahl[i] = 0;
+            }
 
             List<string> mempoolTx = BitcoinToolbox.getMempoolTransactions();
-            Console.WriteLine(mempoolTx[0]);
+            label1.Text = Convert.ToString(mempoolTx.Count);
 
             List<TransactionOutput> deserialized = new List<TransactionOutput>();
 
@@ -143,16 +143,12 @@ namespace Bitcoin_Dashboard
 
             }
 
-
-            label1.Text = deserialized[0].Out[0].Value;
-
             fillChart();
-            timer1.Start();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
             analyzeTransactions();
         }
     }
