@@ -16,7 +16,7 @@ namespace Bitcoin_Dashboard
         private static string passwd;
         private static string sshHost;
 
-        static SshClient sshc = new SshClient(sshHost, userName, passwd);
+        static SshClient sshc;
 
         public static void InitializePi()
         {
@@ -43,18 +43,32 @@ namespace Bitcoin_Dashboard
             sshHost = File.ReadAllText("credentials/ssh/sshHost.txt");
             passwd = File.ReadAllText("credentials/ssh/sshPasswd.txt");
 
-            Thread.Sleep(450);
             sshc = new SshClient(sshHost, userName, passwd);
+            sshc.Connect();
         }
         
         public static string GetTemp()
         {
-            sshc = new SshClient(sshHost, userName, passwd);
-            sshc.Connect();
+
+            //ShellStream stream = sshc.CreateShellStream("vcTemp", 80, 1, 800, 600, 1024);
             SshCommand cmd = sshc.CreateCommand("vcgencmd measure_temp");
             cmd.Execute();
-            string temp = "cmd.Result";
+            string temp = cmd.Result;
+            temp = temp.Replace("temp=", null);
             return temp;
+            //test
+        }
+
+        public static string GetArmClock()
+        {
+            
+            SshCommand cmd = sshc.CreateCommand("vcgencmd measure_clock arm");
+            cmd.Execute();
+            string arm = cmd.Result;
+            arm = arm.Replace("frequency(48)=", null);
+            arm = arm.Remove(4);
+            arm = arm + " Mhz";
+            return arm;
         }
         
         public static string GetThrottled()

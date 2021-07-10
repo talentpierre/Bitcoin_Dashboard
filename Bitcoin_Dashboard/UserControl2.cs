@@ -49,6 +49,8 @@ namespace Bitcoin_Dashboard
 
         private void fillChart()
         {
+            
+
             chart1.Series["Outputs"].Points.AddXY("0", outputAnzahl0);
             chart1.Series["Outputs"].Points.AddXY("1", outputAnzahl1);
             chart1.Series["Outputs"].Points.AddXY("2", outputAnzahl2);
