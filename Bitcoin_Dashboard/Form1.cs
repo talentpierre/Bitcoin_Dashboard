@@ -88,7 +88,7 @@ namespace Bitcoin_Dashboard
             button5.FlatAppearance.BorderSize = 0;
             
             BitcoinToolbox.InitializeRPC();
-
+            
             userControl11.Hide();
             userControl21.Hide();
             userControl31.Hide();
@@ -122,6 +122,7 @@ namespace Bitcoin_Dashboard
 
         private void button5_MouseClick(object sender, MouseEventArgs e)
         {
+            //PiHardware.SshDisconnect();
             this.Close();
         }
 
@@ -181,6 +182,11 @@ namespace Bitcoin_Dashboard
         }
 
         private void userControl21_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }

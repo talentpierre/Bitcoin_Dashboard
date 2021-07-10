@@ -65,8 +65,18 @@ namespace Bitcoin_Dashboard
                 Environment.Exit(0);
             }
 
+
+        }
+
+        public static void SshConnect()
+        {
             sshc = new SshClient(sshHost, userName, passwd);
             sshc.Connect();
+        }
+
+        public static void SshDisconnect()
+        {
+            sshc.Disconnect();
         }
         
         public static string GetTemp()

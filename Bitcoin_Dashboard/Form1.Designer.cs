@@ -41,10 +41,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.userControl21 = new Bitcoin_Dashboard.UserControl2();
+            this.userControl31 = new Bitcoin_Dashboard.UserControl3();
             this.page21 = new Bitcoin_Dashboard.Page2();
             this.userControl11 = new Bitcoin_Dashboard.UserControl1();
-            this.userControl31 = new Bitcoin_Dashboard.UserControl3();
-            this.userControl21 = new Bitcoin_Dashboard.UserControl2();
             this.TopPanel.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button5_MouseClick);
             // 
             // label1
@@ -179,9 +180,27 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
+            // userControl21
+            // 
+            this.userControl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.userControl21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userControl21.Location = new System.Drawing.Point(191, 68);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(742, 558);
+            this.userControl21.TabIndex = 7;
+            this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
+            // 
+            // userControl31
+            // 
+            this.userControl31.BackColor = System.Drawing.Color.OrangeRed;
+            this.userControl31.Location = new System.Drawing.Point(191, 68);
+            this.userControl31.Name = "userControl31";
+            this.userControl31.Size = new System.Drawing.Size(742, 558);
+            this.userControl31.TabIndex = 6;
+            // 
             // page21
             // 
-            this.page21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.page21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.page21.Location = new System.Drawing.Point(191, 68);
             this.page21.Name = "page21";
             this.page21.Size = new System.Drawing.Size(742, 558);
@@ -195,23 +214,6 @@
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(742, 558);
             this.userControl11.TabIndex = 4;
-            // 
-            // userControl31
-            // 
-            this.userControl31.BackColor = System.Drawing.Color.OrangeRed;
-            this.userControl31.Location = new System.Drawing.Point(191, 68);
-            this.userControl31.Name = "userControl31";
-            this.userControl31.Size = new System.Drawing.Size(742, 558);
-            this.userControl31.TabIndex = 6;
-            // 
-            // userControl21
-            // 
-            this.userControl21.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.userControl21.Location = new System.Drawing.Point(191, 68);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(742, 558);
-            this.userControl21.TabIndex = 7;
-            this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
             // 
             // MainWindow
             // 
