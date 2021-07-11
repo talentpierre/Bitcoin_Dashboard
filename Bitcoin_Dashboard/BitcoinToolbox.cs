@@ -116,7 +116,11 @@ namespace Bitcoin_Dashboard
 
         }
 
-
+        public static int getBestBlock()
+        {
+            int height = rpcclient.GetBlockCount();
+            return height;
+        }
 
         
     }

@@ -41,6 +41,7 @@ namespace Bitcoin_Dashboard
             this.label2 = new System.Windows.Forms.Label();
             this.lblBlockheight = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +50,9 @@ namespace Bitcoin_Dashboard
             this.btnMempoolBericht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMempoolBericht.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMempoolBericht.ForeColor = System.Drawing.Color.White;
-            this.btnMempoolBericht.Location = new System.Drawing.Point(500, 45);
+            this.btnMempoolBericht.Location = new System.Drawing.Point(449, 45);
             this.btnMempoolBericht.Name = "btnMempoolBericht";
-            this.btnMempoolBericht.Size = new System.Drawing.Size(105, 23);
+            this.btnMempoolBericht.Size = new System.Drawing.Size(151, 23);
             this.btnMempoolBericht.TabIndex = 0;
             this.btnMempoolBericht.Text = "Mempool Bericht";
             this.btnMempoolBericht.UseVisualStyleBackColor = true;
@@ -149,11 +150,24 @@ namespace Bitcoin_Dashboard
             this.label3.TabIndex = 8;
             this.label3.Text = "__________";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.White;
+            this.lblError.Location = new System.Drawing.Point(396, 80);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(204, 17);
+            this.lblError.TabIndex = 9;
+            this.lblError.Text = "____________________________";
+            this.lblError.Visible = false;
+            // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblBlockheight);
             this.Controls.Add(this.label2);
@@ -181,5 +195,6 @@ namespace Bitcoin_Dashboard
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblBlockheight;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblError;
     }
 }
