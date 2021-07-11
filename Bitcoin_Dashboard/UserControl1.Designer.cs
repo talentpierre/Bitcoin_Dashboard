@@ -30,7 +30,7 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.lblNrBlockTx = new System.Windows.Forms.Label();
-            this.lblBlockVersion = new System.Windows.Forms.Label();
+            this.lblBlockHeight = new System.Windows.Forms.Label();
             this.lblBlocktime = new System.Windows.Forms.Label();
             this.lblBlockSize = new System.Windows.Forms.Label();
             this.lblBestBlock_ = new System.Windows.Forms.Label();
@@ -38,7 +38,7 @@
             this.lbl_blocksize = new System.Windows.Forms.Label();
             this.lbl_blocktime = new System.Windows.Forms.Label();
             this.lbl_nrTx = new System.Windows.Forms.Label();
-            this.lbl_version = new System.Windows.Forms.Label();
+            this.lbl_blockHeight = new System.Windows.Forms.Label();
             this.lblBlockchain = new System.Windows.Forms.Label();
             this.lblBlockchain_ = new System.Windows.Forms.Label();
             this.lblChain = new System.Windows.Forms.Label();
@@ -76,16 +76,16 @@
             this.lblNrBlockTx.TabIndex = 25;
             this.lblNrBlockTx.Text = "Number of Tx:";
             // 
-            // lblBlockVersion
+            // lblBlockHeight
             // 
-            this.lblBlockVersion.AutoSize = true;
-            this.lblBlockVersion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlockVersion.ForeColor = System.Drawing.Color.White;
-            this.lblBlockVersion.Location = new System.Drawing.Point(48, 403);
-            this.lblBlockVersion.Name = "lblBlockVersion";
-            this.lblBlockVersion.Size = new System.Drawing.Size(62, 17);
-            this.lblBlockVersion.TabIndex = 24;
-            this.lblBlockVersion.Text = "Version: ";
+            this.lblBlockHeight.AutoSize = true;
+            this.lblBlockHeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockHeight.ForeColor = System.Drawing.Color.White;
+            this.lblBlockHeight.Location = new System.Drawing.Point(48, 403);
+            this.lblBlockHeight.Name = "lblBlockHeight";
+            this.lblBlockHeight.Size = new System.Drawing.Size(87, 17);
+            this.lblBlockHeight.TabIndex = 24;
+            this.lblBlockHeight.Text = "Blockheight:";
             // 
             // lblBlocktime
             // 
@@ -165,16 +165,16 @@
             this.lbl_nrTx.TabIndex = 28;
             this.lbl_nrTx.Text = "__________";
             // 
-            // lbl_version
+            // lbl_blockHeight
             // 
-            this.lbl_version.AutoSize = true;
-            this.lbl_version.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_version.ForeColor = System.Drawing.Color.White;
-            this.lbl_version.Location = new System.Drawing.Point(208, 403);
-            this.lbl_version.Name = "lbl_version";
-            this.lbl_version.Size = new System.Drawing.Size(78, 17);
-            this.lbl_version.TabIndex = 29;
-            this.lbl_version.Text = "__________";
+            this.lbl_blockHeight.AutoSize = true;
+            this.lbl_blockHeight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_blockHeight.ForeColor = System.Drawing.Color.White;
+            this.lbl_blockHeight.Location = new System.Drawing.Point(208, 403);
+            this.lbl_blockHeight.Name = "lbl_blockHeight";
+            this.lbl_blockHeight.Size = new System.Drawing.Size(78, 17);
+            this.lbl_blockHeight.TabIndex = 29;
+            this.lbl_blockHeight.Text = "__________";
             // 
             // lblBlockchain
             // 
@@ -306,12 +306,12 @@
             this.Controls.Add(this.lbl_initialBlockdownload);
             this.Controls.Add(this.lbl_sizeOnDisk);
             this.Controls.Add(this.lbl_chain);
-            this.Controls.Add(this.lbl_version);
+            this.Controls.Add(this.lbl_blockHeight);
             this.Controls.Add(this.lbl_nrTx);
             this.Controls.Add(this.lbl_blocktime);
             this.Controls.Add(this.lbl_blocksize);
             this.Controls.Add(this.lblNrBlockTx);
-            this.Controls.Add(this.lblBlockVersion);
+            this.Controls.Add(this.lblBlockHeight);
             this.Controls.Add(this.lblBlocktime);
             this.Controls.Add(this.lblBlockSize);
             this.Controls.Add(this.lblBestBlock_);
@@ -334,7 +334,7 @@
         #endregion
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblNrBlockTx;
-        private System.Windows.Forms.Label lblBlockVersion;
+        private System.Windows.Forms.Label lblBlockHeight;
         private System.Windows.Forms.Label lblBlocktime;
         private System.Windows.Forms.Label lblBlockSize;
         private System.Windows.Forms.Label lblBestBlock_;
@@ -342,7 +342,7 @@
         private System.Windows.Forms.Label lbl_blocksize;
         private System.Windows.Forms.Label lbl_blocktime;
         private System.Windows.Forms.Label lbl_nrTx;
-        private System.Windows.Forms.Label lbl_version;
+        private System.Windows.Forms.Label lbl_blockHeight;
         private System.Windows.Forms.Label lblBlockchain;
         private System.Windows.Forms.Label lblBlockchain_;
         private System.Windows.Forms.Label lblChain;

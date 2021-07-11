@@ -221,7 +221,7 @@ namespace Bitcoin_Dashboard
             }
 
             fillChart();
-            label1.Text = Convert.ToString(value/(decimal)100000000);
+            label1.Text = Convert.ToString(value/(decimal)100000000) + " Bitcoin";
 
         }
 

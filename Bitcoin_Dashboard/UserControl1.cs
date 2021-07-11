@@ -34,14 +34,14 @@ namespace Bitcoin_Dashboard
             Block bestBlock = BitcoinToolbox.getBestBlock();
 
             lbl_chain.Text = Convert.ToString(chaininfo.Chain);
-            lbl_sizeOnDisk.Text = Convert.ToString(chaininfo.SizeOnDisk);
+            lbl_sizeOnDisk.Text = Convert.ToString(Math.Round((double)chaininfo.SizeOnDisk / (1024 * 1024 * 1024),2)) + " GiB";
             lbl_initialBlockdownload.Text = Convert.ToString(chaininfo.InitialBlockDownload);
             lbl_verificationProgress.Text = Convert.ToString(chaininfo.VerificationProgress);
 
-            lbl_blocksize.Text = Convert.ToString(bestBlock.GetSerializedSize());
+            lbl_blocksize.Text = Convert.ToString(bestBlock.GetSerializedSize()) + " Bytes";
             lbl_blocktime.Text = Convert.ToString(bestBlock.Header.BlockTime.UtcDateTime);
             lbl_nrTx.Text = Convert.ToString(bestBlock.Transactions.Count);
-            lbl_version.Text = Convert.ToString(bestBlock.Header.Version);
+            lbl_blockHeight.Text = Convert.ToString(bestBlock.GetCoinbaseHeight()); 
 
             progressBar1.BackColor = Color.FromArgb(76, 75, 105);
             progressBar1.ForeColor = Color.PaleGreen;
