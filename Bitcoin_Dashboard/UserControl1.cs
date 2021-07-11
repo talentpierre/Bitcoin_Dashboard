@@ -58,7 +58,5 @@ namespace Bitcoin_Dashboard
             button2.FlatStyle = FlatStyle.Flat;
             button2.FlatAppearance.BorderSize = 0;
         }
-
-
     }
 }
