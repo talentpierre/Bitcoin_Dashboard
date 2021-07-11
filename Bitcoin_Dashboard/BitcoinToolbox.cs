@@ -11,6 +11,7 @@ using NBitcoin;
 using NBitcoin.RPC;
 
 
+
 namespace Bitcoin_Dashboard
 {
     public class BitcoinToolbox
@@ -54,25 +55,6 @@ namespace Bitcoin_Dashboard
 
         }
 
-        
-        public static string getMempoolTransactions()
-        {
-            var mempool_dump = rpcclient.GetRawMempool();
-            Console.WriteLine(mempool_dump.Length);
-
-            NBitcoin.uint256[] mempooldump = rpcclient.GetRawMempool();
-            NBitcoin.Transaction[] tx = new Transaction[1000000];
-            int j = 0;
-
-            foreach (uint256 i in mempooldump)
-            {
-                tx[j] = rpcclient.GetRawTransaction(mempooldump[j]);
-            }
-
-            return Convert.ToString(rpcclient.DecodeRawTransaction(tx[j].ToHex()));
-            
-        }
-
         public static string getBlockInfo(string info, int height)
         {
             uint256 blockhash = rpcclient.GetBlockHash(height);
@@ -105,6 +87,38 @@ namespace Bitcoin_Dashboard
             return result;
         }
 
+        public static List<Transaction> getBlockTransactions(int height)
+        {
+            uint256 blockhash = rpcclient.GetBlockHash(height);
+            NBitcoin.Block newBlock = rpcclient.GetBlock(blockhash);
+
+            List<Transaction> txsBlock = newBlock.Transactions;
+  
+            return txsBlock;
+        }
+
+
+        public static List<Transaction> getMempoolTransactions()
+        {
+            NBitcoin.uint256[] mempooldump = rpcclient.GetRawMempool();
+            Console.WriteLine(mempooldump.Length);
+
+            List<NBitcoin.Transaction> txsMempool = new List<Transaction>();
+
+            foreach (uint256 i in mempooldump)
+            {
+                Console.WriteLine(i);
+                txsMempool.Add(rpcclient.GetRawTransaction(i));
+
+            }
+
+            return txsMempool;
+
+        }
+
+
+
+        
     }
 
     
