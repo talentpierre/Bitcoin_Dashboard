@@ -42,8 +42,11 @@ namespace Bitcoin_Dashboard
             lbl_blocktime.Text = Convert.ToString(bestBlock.Header.BlockTime.UtcDateTime);
             lbl_nrTx.Text = Convert.ToString(bestBlock.Transactions.Count);
             lbl_version.Text = Convert.ToString(bestBlock.Header.Version);
-            
-                
+
+            progressBar1.BackColor = Color.FromArgb(76, 75, 105);
+            progressBar1.ForeColor = Color.PaleGreen;
+            progressBar1.Value = Convert.ToInt32(chaininfo.VerificationProgress * 1000000);
+            //progressBar1.Value = Convert.ToInt32(0.5 * 1000000);
         }
 
         private void UserControl1_Load(object sender, EventArgs e)

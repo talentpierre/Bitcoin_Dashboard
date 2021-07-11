@@ -49,6 +49,7 @@
             this.lbl_sizeOnDisk = new System.Windows.Forms.Label();
             this.lbl_initialBlockdownload = new System.Windows.Forms.Label();
             this.lbl_verificationProgress = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // button2
@@ -69,7 +70,7 @@
             this.lblNrBlockTx.AutoSize = true;
             this.lblNrBlockTx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNrBlockTx.ForeColor = System.Drawing.Color.White;
-            this.lblNrBlockTx.Location = new System.Drawing.Point(48, 354);
+            this.lblNrBlockTx.Location = new System.Drawing.Point(48, 373);
             this.lblNrBlockTx.Name = "lblNrBlockTx";
             this.lblNrBlockTx.Size = new System.Drawing.Size(96, 17);
             this.lblNrBlockTx.TabIndex = 25;
@@ -80,7 +81,7 @@
             this.lblBlockVersion.AutoSize = true;
             this.lblBlockVersion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlockVersion.ForeColor = System.Drawing.Color.White;
-            this.lblBlockVersion.Location = new System.Drawing.Point(48, 384);
+            this.lblBlockVersion.Location = new System.Drawing.Point(48, 403);
             this.lblBlockVersion.Name = "lblBlockVersion";
             this.lblBlockVersion.Size = new System.Drawing.Size(62, 17);
             this.lblBlockVersion.TabIndex = 24;
@@ -91,7 +92,7 @@
             this.lblBlocktime.AutoSize = true;
             this.lblBlocktime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlocktime.ForeColor = System.Drawing.Color.White;
-            this.lblBlocktime.Location = new System.Drawing.Point(48, 324);
+            this.lblBlocktime.Location = new System.Drawing.Point(48, 343);
             this.lblBlocktime.Name = "lblBlocktime";
             this.lblBlocktime.Size = new System.Drawing.Size(75, 17);
             this.lblBlocktime.TabIndex = 23;
@@ -102,7 +103,7 @@
             this.lblBlockSize.AutoSize = true;
             this.lblBlockSize.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlockSize.ForeColor = System.Drawing.Color.White;
-            this.lblBlockSize.Location = new System.Drawing.Point(48, 294);
+            this.lblBlockSize.Location = new System.Drawing.Point(48, 313);
             this.lblBlockSize.Name = "lblBlockSize";
             this.lblBlockSize.Size = new System.Drawing.Size(68, 17);
             this.lblBlockSize.TabIndex = 22;
@@ -113,19 +114,19 @@
             this.lblBestBlock_.AutoSize = true;
             this.lblBestBlock_.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBestBlock_.ForeColor = System.Drawing.Color.PaleGreen;
-            this.lblBestBlock_.Location = new System.Drawing.Point(46, 264);
+            this.lblBestBlock_.Location = new System.Drawing.Point(46, 283);
             this.lblBestBlock_.Name = "lblBestBlock_";
-            this.lblBestBlock_.Size = new System.Drawing.Size(575, 17);
+            this.lblBestBlock_.Size = new System.Drawing.Size(582, 17);
             this.lblBestBlock_.TabIndex = 21;
             this.lblBestBlock_.Text = "_________________________________________________________________________________" +
-    "";
+    "_";
             // 
             // lblBestBlock
             // 
             this.lblBestBlock.AutoSize = true;
             this.lblBestBlock.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBestBlock.ForeColor = System.Drawing.Color.White;
-            this.lblBestBlock.Location = new System.Drawing.Point(48, 247);
+            this.lblBestBlock.Location = new System.Drawing.Point(48, 266);
             this.lblBestBlock.Name = "lblBestBlock";
             this.lblBestBlock.Size = new System.Drawing.Size(75, 17);
             this.lblBestBlock.TabIndex = 20;
@@ -136,7 +137,7 @@
             this.lbl_blocksize.AutoSize = true;
             this.lbl_blocksize.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_blocksize.ForeColor = System.Drawing.Color.White;
-            this.lbl_blocksize.Location = new System.Drawing.Point(208, 294);
+            this.lbl_blocksize.Location = new System.Drawing.Point(208, 313);
             this.lbl_blocksize.Name = "lbl_blocksize";
             this.lbl_blocksize.Size = new System.Drawing.Size(78, 17);
             this.lbl_blocksize.TabIndex = 26;
@@ -147,7 +148,7 @@
             this.lbl_blocktime.AutoSize = true;
             this.lbl_blocktime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_blocktime.ForeColor = System.Drawing.Color.White;
-            this.lbl_blocktime.Location = new System.Drawing.Point(208, 324);
+            this.lbl_blocktime.Location = new System.Drawing.Point(208, 343);
             this.lbl_blocktime.Name = "lbl_blocktime";
             this.lbl_blocktime.Size = new System.Drawing.Size(78, 17);
             this.lbl_blocktime.TabIndex = 27;
@@ -158,7 +159,7 @@
             this.lbl_nrTx.AutoSize = true;
             this.lbl_nrTx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nrTx.ForeColor = System.Drawing.Color.White;
-            this.lbl_nrTx.Location = new System.Drawing.Point(208, 354);
+            this.lbl_nrTx.Location = new System.Drawing.Point(208, 373);
             this.lbl_nrTx.Name = "lbl_nrTx";
             this.lbl_nrTx.Size = new System.Drawing.Size(78, 17);
             this.lbl_nrTx.TabIndex = 28;
@@ -169,7 +170,7 @@
             this.lbl_version.AutoSize = true;
             this.lbl_version.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_version.ForeColor = System.Drawing.Color.White;
-            this.lbl_version.Location = new System.Drawing.Point(208, 384);
+            this.lbl_version.Location = new System.Drawing.Point(208, 403);
             this.lbl_version.Name = "lbl_version";
             this.lbl_version.Size = new System.Drawing.Size(78, 17);
             this.lbl_version.TabIndex = 29;
@@ -286,11 +287,21 @@
             this.lbl_verificationProgress.TabIndex = 33;
             this.lbl_verificationProgress.Text = "__________";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(51, 226);
+            this.progressBar1.Maximum = 1000000;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(490, 13);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 34;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbl_verificationProgress);
             this.Controls.Add(this.lbl_initialBlockdownload);
             this.Controls.Add(this.lbl_sizeOnDisk);
@@ -342,5 +353,6 @@
         private System.Windows.Forms.Label lbl_sizeOnDisk;
         private System.Windows.Forms.Label lbl_initialBlockdownload;
         private System.Windows.Forms.Label lbl_verificationProgress;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
