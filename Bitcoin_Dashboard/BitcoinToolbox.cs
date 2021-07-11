@@ -51,7 +51,7 @@ namespace Bitcoin_Dashboard
                 Application.Exit();
             }
 
-            rpcclient = new RPCClient(rpcCredentials, rpcHost, Network.TestNet);
+            rpcclient = new RPCClient(rpcCredentials, rpcHost, network);
 
         }
 
@@ -116,10 +116,21 @@ namespace Bitcoin_Dashboard
 
         }
 
-        public static int getBestBlock()
+        public static int getBestBlockHeight()
         {
             int height = rpcclient.GetBlockCount();
             return height;
+        }
+
+        public static BlockchainInfo getBlockchainInformation()
+        {
+            return rpcclient.GetBlockchainInfo();
+        }
+
+        public static Block getBestBlock()
+        {
+            uint256 bestBlockHash =  rpcclient.GetBestBlockHash();
+            return rpcclient.GetBlock(bestBlockHash);
         }
 
         

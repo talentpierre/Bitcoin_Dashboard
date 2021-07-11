@@ -36,7 +36,7 @@ namespace Bitcoin_Dashboard
                 lblError.Visible = true;
             }
             
-            label3.Text = Convert.ToString(BitcoinToolbox.getBestBlock());
+            label3.Text = Convert.ToString(BitcoinToolbox.getBestBlockHeight());
         }
 
         private void fillArray(int[] oiAnzahl)

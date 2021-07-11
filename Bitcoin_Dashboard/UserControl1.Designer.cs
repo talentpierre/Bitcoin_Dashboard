@@ -29,139 +29,291 @@
         private void InitializeComponent()
         {
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label_blockhash = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label_weight = new System.Windows.Forms.Label();
-            this.label_coinbaseheight = new System.Windows.Forms.Label();
-            this.label_merkleroot = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblNrBlockTx = new System.Windows.Forms.Label();
+            this.lblBlockVersion = new System.Windows.Forms.Label();
+            this.lblBlocktime = new System.Windows.Forms.Label();
+            this.lblBlockSize = new System.Windows.Forms.Label();
+            this.lblBestBlock_ = new System.Windows.Forms.Label();
+            this.lblBestBlock = new System.Windows.Forms.Label();
+            this.lbl_blocksize = new System.Windows.Forms.Label();
+            this.lbl_blocktime = new System.Windows.Forms.Label();
+            this.lbl_nrTx = new System.Windows.Forms.Label();
+            this.lbl_version = new System.Windows.Forms.Label();
+            this.lblBlockchain = new System.Windows.Forms.Label();
+            this.lblBlockchain_ = new System.Windows.Forms.Label();
+            this.lblChain = new System.Windows.Forms.Label();
+            this.lblSizeOnDisk = new System.Windows.Forms.Label();
+            this.lblVerificationProcess = new System.Windows.Forms.Label();
+            this.lblInitialBlockdownload = new System.Windows.Forms.Label();
+            this.lbl_chain = new System.Windows.Forms.Label();
+            this.lbl_sizeOnDisk = new System.Windows.Forms.Label();
+            this.lbl_initialBlockdownload = new System.Windows.Forms.Label();
+            this.lbl_verificationProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 317);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(448, 35);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(150, 23);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
+            this.button2.Text = "START";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // lblNrBlockTx
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Blockhash: ";
+            this.lblNrBlockTx.AutoSize = true;
+            this.lblNrBlockTx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNrBlockTx.ForeColor = System.Drawing.Color.White;
+            this.lblNrBlockTx.Location = new System.Drawing.Point(48, 354);
+            this.lblNrBlockTx.Name = "lblNrBlockTx";
+            this.lblNrBlockTx.Size = new System.Drawing.Size(96, 17);
+            this.lblNrBlockTx.TabIndex = 25;
+            this.lblNrBlockTx.Text = "Number of Tx:";
             // 
-            // label_blockhash
+            // lblBlockVersion
             // 
-            this.label_blockhash.AutoSize = true;
-            this.label_blockhash.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_blockhash.ForeColor = System.Drawing.Color.White;
-            this.label_blockhash.Location = new System.Drawing.Point(130, 60);
-            this.label_blockhash.Name = "label_blockhash";
-            this.label_blockhash.Size = new System.Drawing.Size(47, 17);
-            this.label_blockhash.TabIndex = 4;
-            this.label_blockhash.Text = "label2";
+            this.lblBlockVersion.AutoSize = true;
+            this.lblBlockVersion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockVersion.ForeColor = System.Drawing.Color.White;
+            this.lblBlockVersion.Location = new System.Drawing.Point(48, 384);
+            this.lblBlockVersion.Name = "lblBlockVersion";
+            this.lblBlockVersion.Size = new System.Drawing.Size(62, 17);
+            this.lblBlockVersion.TabIndex = 24;
+            this.lblBlockVersion.Text = "Version: ";
             // 
-            // label4
+            // lblBlocktime
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(25, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Höhe: ";
+            this.lblBlocktime.AutoSize = true;
+            this.lblBlocktime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlocktime.ForeColor = System.Drawing.Color.White;
+            this.lblBlocktime.Location = new System.Drawing.Point(48, 324);
+            this.lblBlocktime.Name = "lblBlocktime";
+            this.lblBlocktime.Size = new System.Drawing.Size(75, 17);
+            this.lblBlocktime.TabIndex = 23;
+            this.lblBlocktime.Text = "Blocktime:";
             // 
-            // label6
+            // lblBlockSize
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(25, 120);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 17);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Gewicht: ";
+            this.lblBlockSize.AutoSize = true;
+            this.lblBlockSize.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockSize.ForeColor = System.Drawing.Color.White;
+            this.lblBlockSize.Location = new System.Drawing.Point(48, 294);
+            this.lblBlockSize.Name = "lblBlockSize";
+            this.lblBlockSize.Size = new System.Drawing.Size(68, 17);
+            this.lblBlockSize.TabIndex = 22;
+            this.lblBlockSize.Text = "Blocksize:";
             // 
-            // label5
+            // lblBestBlock_
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(25, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Merkleroot: ";
+            this.lblBestBlock_.AutoSize = true;
+            this.lblBestBlock_.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBestBlock_.ForeColor = System.Drawing.Color.PaleGreen;
+            this.lblBestBlock_.Location = new System.Drawing.Point(46, 264);
+            this.lblBestBlock_.Name = "lblBestBlock_";
+            this.lblBestBlock_.Size = new System.Drawing.Size(575, 17);
+            this.lblBestBlock_.TabIndex = 21;
+            this.lblBestBlock_.Text = "_________________________________________________________________________________" +
+    "";
             // 
-            // label_weight
+            // lblBestBlock
             // 
-            this.label_weight.AutoSize = true;
-            this.label_weight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_weight.ForeColor = System.Drawing.Color.White;
-            this.label_weight.Location = new System.Drawing.Point(130, 120);
-            this.label_weight.Name = "label_weight";
-            this.label_weight.Size = new System.Drawing.Size(47, 17);
-            this.label_weight.TabIndex = 10;
-            this.label_weight.Text = "label3";
+            this.lblBestBlock.AutoSize = true;
+            this.lblBestBlock.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBestBlock.ForeColor = System.Drawing.Color.White;
+            this.lblBestBlock.Location = new System.Drawing.Point(48, 247);
+            this.lblBestBlock.Name = "lblBestBlock";
+            this.lblBestBlock.Size = new System.Drawing.Size(75, 17);
+            this.lblBestBlock.TabIndex = 20;
+            this.lblBestBlock.Text = "Best Block:";
             // 
-            // label_coinbaseheight
+            // lbl_blocksize
             // 
-            this.label_coinbaseheight.AutoSize = true;
-            this.label_coinbaseheight.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_coinbaseheight.ForeColor = System.Drawing.Color.White;
-            this.label_coinbaseheight.Location = new System.Drawing.Point(130, 180);
-            this.label_coinbaseheight.Name = "label_coinbaseheight";
-            this.label_coinbaseheight.Size = new System.Drawing.Size(47, 17);
-            this.label_coinbaseheight.TabIndex = 11;
-            this.label_coinbaseheight.Text = "label7";
+            this.lbl_blocksize.AutoSize = true;
+            this.lbl_blocksize.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_blocksize.ForeColor = System.Drawing.Color.White;
+            this.lbl_blocksize.Location = new System.Drawing.Point(208, 294);
+            this.lbl_blocksize.Name = "lbl_blocksize";
+            this.lbl_blocksize.Size = new System.Drawing.Size(78, 17);
+            this.lbl_blocksize.TabIndex = 26;
+            this.lbl_blocksize.Text = "__________";
             // 
-            // label_merkleroot
+            // lbl_blocktime
             // 
-            this.label_merkleroot.AutoSize = true;
-            this.label_merkleroot.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_merkleroot.ForeColor = System.Drawing.Color.White;
-            this.label_merkleroot.Location = new System.Drawing.Point(130, 240);
-            this.label_merkleroot.Name = "label_merkleroot";
-            this.label_merkleroot.Size = new System.Drawing.Size(47, 17);
-            this.label_merkleroot.TabIndex = 12;
-            this.label_merkleroot.Text = "lable8";
+            this.lbl_blocktime.AutoSize = true;
+            this.lbl_blocktime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_blocktime.ForeColor = System.Drawing.Color.White;
+            this.lbl_blocktime.Location = new System.Drawing.Point(208, 324);
+            this.lbl_blocktime.Name = "lbl_blocktime";
+            this.lbl_blocktime.Size = new System.Drawing.Size(78, 17);
+            this.lbl_blocktime.TabIndex = 27;
+            this.lbl_blocktime.Text = "__________";
             // 
-            // textBox1
+            // lbl_nrTx
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 319);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 20);
-            this.textBox1.TabIndex = 13;
+            this.lbl_nrTx.AutoSize = true;
+            this.lbl_nrTx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nrTx.ForeColor = System.Drawing.Color.White;
+            this.lbl_nrTx.Location = new System.Drawing.Point(208, 354);
+            this.lbl_nrTx.Name = "lbl_nrTx";
+            this.lbl_nrTx.Size = new System.Drawing.Size(78, 17);
+            this.lbl_nrTx.TabIndex = 28;
+            this.lbl_nrTx.Text = "__________";
+            // 
+            // lbl_version
+            // 
+            this.lbl_version.AutoSize = true;
+            this.lbl_version.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_version.ForeColor = System.Drawing.Color.White;
+            this.lbl_version.Location = new System.Drawing.Point(208, 384);
+            this.lbl_version.Name = "lbl_version";
+            this.lbl_version.Size = new System.Drawing.Size(78, 17);
+            this.lbl_version.TabIndex = 29;
+            this.lbl_version.Text = "__________";
+            // 
+            // lblBlockchain
+            // 
+            this.lblBlockchain.AutoSize = true;
+            this.lblBlockchain.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockchain.ForeColor = System.Drawing.Color.White;
+            this.lblBlockchain.Location = new System.Drawing.Point(48, 59);
+            this.lblBlockchain.Name = "lblBlockchain";
+            this.lblBlockchain.Size = new System.Drawing.Size(82, 17);
+            this.lblBlockchain.TabIndex = 14;
+            this.lblBlockchain.Text = "Blockchain:";
+            // 
+            // lblBlockchain_
+            // 
+            this.lblBlockchain_.AutoSize = true;
+            this.lblBlockchain_.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockchain_.ForeColor = System.Drawing.Color.PaleGreen;
+            this.lblBlockchain_.Location = new System.Drawing.Point(46, 76);
+            this.lblBlockchain_.Name = "lblBlockchain_";
+            this.lblBlockchain_.Size = new System.Drawing.Size(582, 17);
+            this.lblBlockchain_.TabIndex = 15;
+            this.lblBlockchain_.Text = "_________________________________________________________________________________" +
+    "_";
+            // 
+            // lblChain
+            // 
+            this.lblChain.AutoSize = true;
+            this.lblChain.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChain.ForeColor = System.Drawing.Color.White;
+            this.lblChain.Location = new System.Drawing.Point(48, 106);
+            this.lblChain.Name = "lblChain";
+            this.lblChain.Size = new System.Drawing.Size(51, 17);
+            this.lblChain.TabIndex = 16;
+            this.lblChain.Text = "Chain:";
+            // 
+            // lblSizeOnDisk
+            // 
+            this.lblSizeOnDisk.AutoSize = true;
+            this.lblSizeOnDisk.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSizeOnDisk.ForeColor = System.Drawing.Color.White;
+            this.lblSizeOnDisk.Location = new System.Drawing.Point(48, 136);
+            this.lblSizeOnDisk.Name = "lblSizeOnDisk";
+            this.lblSizeOnDisk.Size = new System.Drawing.Size(84, 17);
+            this.lblSizeOnDisk.TabIndex = 17;
+            this.lblSizeOnDisk.Text = "Size on disk:";
+            // 
+            // lblVerificationProcess
+            // 
+            this.lblVerificationProcess.AutoSize = true;
+            this.lblVerificationProcess.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerificationProcess.ForeColor = System.Drawing.Color.White;
+            this.lblVerificationProcess.Location = new System.Drawing.Point(48, 196);
+            this.lblVerificationProcess.Name = "lblVerificationProcess";
+            this.lblVerificationProcess.Size = new System.Drawing.Size(64, 17);
+            this.lblVerificationProcess.TabIndex = 18;
+            this.lblVerificationProcess.Text = "Progress:";
+            // 
+            // lblInitialBlockdownload
+            // 
+            this.lblInitialBlockdownload.AutoSize = true;
+            this.lblInitialBlockdownload.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInitialBlockdownload.ForeColor = System.Drawing.Color.White;
+            this.lblInitialBlockdownload.Location = new System.Drawing.Point(48, 166);
+            this.lblInitialBlockdownload.Name = "lblInitialBlockdownload";
+            this.lblInitialBlockdownload.Size = new System.Drawing.Size(152, 17);
+            this.lblInitialBlockdownload.TabIndex = 19;
+            this.lblInitialBlockdownload.Text = "Initial Blockdownload:";
+            // 
+            // lbl_chain
+            // 
+            this.lbl_chain.AutoSize = true;
+            this.lbl_chain.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_chain.ForeColor = System.Drawing.Color.White;
+            this.lbl_chain.Location = new System.Drawing.Point(206, 106);
+            this.lbl_chain.Name = "lbl_chain";
+            this.lbl_chain.Size = new System.Drawing.Size(78, 17);
+            this.lbl_chain.TabIndex = 30;
+            this.lbl_chain.Text = "__________";
+            // 
+            // lbl_sizeOnDisk
+            // 
+            this.lbl_sizeOnDisk.AutoSize = true;
+            this.lbl_sizeOnDisk.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sizeOnDisk.ForeColor = System.Drawing.Color.White;
+            this.lbl_sizeOnDisk.Location = new System.Drawing.Point(206, 136);
+            this.lbl_sizeOnDisk.Name = "lbl_sizeOnDisk";
+            this.lbl_sizeOnDisk.Size = new System.Drawing.Size(78, 17);
+            this.lbl_sizeOnDisk.TabIndex = 31;
+            this.lbl_sizeOnDisk.Text = "__________";
+            // 
+            // lbl_initialBlockdownload
+            // 
+            this.lbl_initialBlockdownload.AutoSize = true;
+            this.lbl_initialBlockdownload.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_initialBlockdownload.ForeColor = System.Drawing.Color.White;
+            this.lbl_initialBlockdownload.Location = new System.Drawing.Point(206, 166);
+            this.lbl_initialBlockdownload.Name = "lbl_initialBlockdownload";
+            this.lbl_initialBlockdownload.Size = new System.Drawing.Size(78, 17);
+            this.lbl_initialBlockdownload.TabIndex = 32;
+            this.lbl_initialBlockdownload.Text = "__________";
+            // 
+            // lbl_verificationProgress
+            // 
+            this.lbl_verificationProgress.AutoSize = true;
+            this.lbl_verificationProgress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_verificationProgress.ForeColor = System.Drawing.Color.White;
+            this.lbl_verificationProgress.Location = new System.Drawing.Point(206, 196);
+            this.lbl_verificationProgress.Name = "lbl_verificationProgress";
+            this.lbl_verificationProgress.Size = new System.Drawing.Size(78, 17);
+            this.lbl_verificationProgress.TabIndex = 33;
+            this.lbl_verificationProgress.Text = "__________";
             // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label_merkleroot);
-            this.Controls.Add(this.label_coinbaseheight);
-            this.Controls.Add(this.label_weight);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label_blockhash);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_verificationProgress);
+            this.Controls.Add(this.lbl_initialBlockdownload);
+            this.Controls.Add(this.lbl_sizeOnDisk);
+            this.Controls.Add(this.lbl_chain);
+            this.Controls.Add(this.lbl_version);
+            this.Controls.Add(this.lbl_nrTx);
+            this.Controls.Add(this.lbl_blocktime);
+            this.Controls.Add(this.lbl_blocksize);
+            this.Controls.Add(this.lblNrBlockTx);
+            this.Controls.Add(this.lblBlockVersion);
+            this.Controls.Add(this.lblBlocktime);
+            this.Controls.Add(this.lblBlockSize);
+            this.Controls.Add(this.lblBestBlock_);
+            this.Controls.Add(this.lblBestBlock);
+            this.Controls.Add(this.lblInitialBlockdownload);
+            this.Controls.Add(this.lblVerificationProcess);
+            this.Controls.Add(this.lblSizeOnDisk);
+            this.Controls.Add(this.lblChain);
+            this.Controls.Add(this.lblBlockchain_);
+            this.Controls.Add(this.lblBlockchain);
             this.Controls.Add(this.button2);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(631, 477);
+            this.Size = new System.Drawing.Size(670, 439);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,14 +322,25 @@
 
         #endregion
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label_blockhash;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label_weight;
-        private System.Windows.Forms.Label label_coinbaseheight;
-        private System.Windows.Forms.Label label_merkleroot;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblNrBlockTx;
+        private System.Windows.Forms.Label lblBlockVersion;
+        private System.Windows.Forms.Label lblBlocktime;
+        private System.Windows.Forms.Label lblBlockSize;
+        private System.Windows.Forms.Label lblBestBlock_;
+        private System.Windows.Forms.Label lblBestBlock;
+        private System.Windows.Forms.Label lbl_blocksize;
+        private System.Windows.Forms.Label lbl_blocktime;
+        private System.Windows.Forms.Label lbl_nrTx;
+        private System.Windows.Forms.Label lbl_version;
+        private System.Windows.Forms.Label lblBlockchain;
+        private System.Windows.Forms.Label lblBlockchain_;
+        private System.Windows.Forms.Label lblChain;
+        private System.Windows.Forms.Label lblSizeOnDisk;
+        private System.Windows.Forms.Label lblVerificationProcess;
+        private System.Windows.Forms.Label lblInitialBlockdownload;
+        private System.Windows.Forms.Label lbl_chain;
+        private System.Windows.Forms.Label lbl_sizeOnDisk;
+        private System.Windows.Forms.Label lbl_initialBlockdownload;
+        private System.Windows.Forms.Label lbl_verificationProgress;
     }
 }
