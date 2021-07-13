@@ -63,6 +63,8 @@ namespace Bitcoin_Dashboard
             userControl11.Hide();
             userControl21.Hide();
             userControl31.Hide();
+
+            PiHardware.InitializePi();
             
         }
 
@@ -85,6 +87,7 @@ namespace Bitcoin_Dashboard
         private void button5_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
+            Environment.Exit(0);
         }
 
         private void button6_Click(object sender, EventArgs e)
