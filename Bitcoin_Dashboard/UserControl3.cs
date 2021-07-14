@@ -25,12 +25,20 @@ namespace Bitcoin_Dashboard
 
         private void UserControl3_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(44, 43, 60);
-            chart1.BackColor = Color.FromArgb(76, 75, 105);
-            btnBlockBericht.BackColor = Color.FromArgb(76, 75, 105);
-            btnBlockBericht.ForeColor = Color.White;
-            btnBlockBericht.FlatStyle = FlatStyle.Flat;
+            this.BackColor = design.pageBackColor;
+            chart1.BackColor = design.chartBackColor;
+            btnBlockBericht.BackColor = design.btnBackColor;
+            btnBlockBericht.ForeColor = design.btnForeColor;
+            btnBlockBericht.FlatStyle = design.btnFlatstyle;
             btnBlockBericht.FlatAppearance.BorderSize = 0;
+
+            ControlCollection ctn = this.Controls;
+            foreach (Control obj in ctn)
+            {
+                obj.ForeColor = design.lblForeColor;
+                obj.Font = design.font;
+            }
+            textBoxBlockbericht.ForeColor = Color.Black;
 
             fillArray(inputAnzahl);
             fillArray(outputAnzahl);
