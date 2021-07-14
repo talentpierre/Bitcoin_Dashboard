@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitcoinToolbox.cs" />
+    <Compile Include="design.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

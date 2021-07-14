@@ -12,6 +12,8 @@ namespace Bitcoin_Dashboard
 {
     public partial class Page2 : UserControl
     {
+        private static bool connected = false;
+        
         public Page2()
         {
             InitializeComponent();
@@ -19,20 +21,47 @@ namespace Bitcoin_Dashboard
 
         private void Page2_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(44, 43, 60);
-            btnSSH.BackColor = Color.FromArgb(76, 75, 105);
-            btnSSH.ForeColor = Color.White;
-            btnSSH.FlatStyle = FlatStyle.Flat;
+            this.BackColor = design.pageBackColor;
+            btnSSH.BackColor = design.btnBackColor;
+            btnSSH.ForeColor = design.btnForeColor;
+            btnSSH.FlatStyle = design.btnFlatstyle;
             btnSSH.FlatAppearance.BorderSize = 0;
+            btnSSH.Font = design.font;
+            ControlCollection ctn = this.Controls;
+            foreach (Control obj in ctn)
+            {
+                obj.ForeColor = design.lblForeColor;
+                obj.Font = design.font;
+            }
         }
 
         private void btnSSH_Click(object sender, EventArgs e)
         {
-            PiHardware.SshConnect();
+            if (connected == false)
+            {
+                PiHardware.SshConnect();
+                lblTemp.Text = Convert.ToString(PiHardware.GetTemp());
+                lblArmClock.Text = Convert.ToString(PiHardware.GetArmClock());
+                connected = true;
+                btnSSH.Text = "Disconnect";
+            }
+            else
+            {
+                PiHardware.SshDisconnect();
+                lblTemp.Text = "N/A";
+                lblArmClock.Text = "N/A";
+                connected = false;
+                btnSSH.Text = "Connect";
+            }
+            
 
 
-            label1.Text = Convert.ToString(PiHardware.GetTemp());
-            label2.Text = Convert.ToString(PiHardware.GetArmClock());
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

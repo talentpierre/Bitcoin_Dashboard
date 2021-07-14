@@ -51,12 +51,19 @@ namespace Bitcoin_Dashboard
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(44, 43, 60);
+            this.BackColor = design.pageBackColor;
 
-            button2.BackColor = Color.FromArgb(76, 75, 105);
-            button2.ForeColor = Color.White;
-            button2.FlatStyle = FlatStyle.Flat;
+            button2.BackColor = design.btnBackColor;
+            button2.ForeColor = design.btnForeColor;
+            button2.FlatStyle = design.btnFlatstyle;
             button2.FlatAppearance.BorderSize = 0;
+
+            ControlCollection ctn = this.Controls;
+            foreach (Control obj in ctn)
+            {
+                obj.ForeColor = design.lblForeColor;
+                obj.Font = design.font;
+            }
         }
     }
 }
