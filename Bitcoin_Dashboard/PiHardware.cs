@@ -80,6 +80,14 @@ namespace Bitcoin_Dashboard
             sshc.Disconnect();
         }
         
+        public static string GetPiModel()
+        {
+            SshCommand cmd = sshc.CreateCommand("cat /sys/firmware/devicetree/base/model");
+            cmd.Execute();
+            string model = cmd.Result;
+                return model;
+        }
+        
         public static string GetTemp()
         {
 
@@ -95,18 +103,65 @@ namespace Bitcoin_Dashboard
         public static string GetArmClock()
         {
             
+            
+            
             SshCommand cmd = sshc.CreateCommand("vcgencmd measure_clock arm");
             cmd.Execute();
             string arm = cmd.Result;
             arm = arm.Replace("frequency(48)=", null);
-            arm = arm.Remove(4);
+
+            if (arm.Length == 11)
+            {
+                arm = arm.Remove(4);
+            }
+            else if (arm.Length == 10)
+            {
+                arm = arm.Remove(5);
+            }
+            else
+            {
+                arm = "Error: " + arm.Length + ": Can't geht valid";
+            }
+
             arm = arm + " Mhz";
             return arm;
         }
         
         public static string GetThrottled()
         {
-            return null;
+            string hr = string.Empty;
+
+            SshCommand cmd = sshc.CreateCommand("vcgencmd get_throttled");
+            cmd.Execute();
+            string hex = cmd.Result.Replace("throttled=", null);
+            hex = hex.Replace("\n", null);
+
+            switch (hex)
+            {
+                case "0x0":
+                    hr = "OK";
+                    break;
+                case "0x1":
+                    hr = "Unterspannung erkannt";
+                    break;
+                case "0x2":
+                    hr = "CPU Taktfrequnz gekappt (Überhitzungsschutz)";
+                    break;
+                case "0x4":
+                    hr = "CPU ist gedrosselt";
+                    break;
+                case "0x8":
+                    hr = "Temperatur limitierung ist aktiv";
+                    break;
+           
+                default:
+                    hr = "Can't get throttling informations";
+                    break;
+            }
+
+            
+
+            return hr;
         }
 
     }

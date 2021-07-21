@@ -40,16 +40,20 @@ namespace Bitcoin_Dashboard
             if (connected == false)
             {
                 PiHardware.SshConnect();
+                lblModel.Text = PiHardware.GetPiModel();
                 lblTemp.Text = Convert.ToString(PiHardware.GetTemp());
                 lblArmClock.Text = Convert.ToString(PiHardware.GetArmClock());
+                lblSystemstate.Text = PiHardware.GetThrottled();
                 connected = true;
                 btnSSH.Text = "Disconnect";
             }
             else
             {
                 PiHardware.SshDisconnect();
+                lblModel.Text = "No Raspberry Pi connected";
                 lblTemp.Text = "N/A";
                 lblArmClock.Text = "N/A";
+                lblSystemstate.Text = "N/A";
                 connected = false;
                 btnSSH.Text = "Connect";
             }
