@@ -25,31 +25,11 @@ namespace Bitcoin_Dashboard
 
         public static void InitializeRPC()
         {
+
+
+            rpcHost = Config.GetRpcHost();
+            rpcCredentials = Config.GetRpcCredentials();
             
-            if (Directory.Exists("credentials/") == false)
-            {
-                Directory.CreateDirectory("credentials/");
-            }
-            if (File.Exists("credentials/rpcCredentials.txt") == false)
-            {
-                File.Create("credentials/rpcCredentials.txt");
-            }
-            if (File.Exists("credentials/rpcHost.txt") == false)
-            {
-                File.Create("credentials/rpcHost.txt");
-            }
-
-            rpcHost = File.ReadAllText("credentials/rpcHost.txt");
-            rpcCredentials = File.ReadAllText("credentials/rpcCredentials.txt");
-            
-
-
-            if (rpcHost == "" || rpcCredentials == "")
-            {
-                MessageBox.Show("Du hast keinen Host oder Credentials eingetragen!\nBitte mach das und versuche es erneut");
-                Thread.Sleep(1200);
-                Application.Exit();
-            }
 
             rpcclient = new RPCClient(rpcCredentials, rpcHost, network);
 

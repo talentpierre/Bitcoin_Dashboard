@@ -30,7 +30,7 @@
         {
             this.TopPanel = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNodeTitle = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnChange = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.userControl21 = new Bitcoin_Dashboard.UserControl2();
             this.userControl31 = new Bitcoin_Dashboard.UserControl3();
             this.page21 = new Bitcoin_Dashboard.Page2();
@@ -53,7 +54,7 @@
             // 
             this.TopPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TopPanel.Controls.Add(this.button5);
-            this.TopPanel.Controls.Add(this.label1);
+            this.TopPanel.Controls.Add(this.lblNodeTitle);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Name = "TopPanel";
@@ -71,19 +72,20 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button5_MouseClick);
             // 
-            // label1
+            // lblNodeTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bitcoin Node Explorer";
+            this.lblNodeTitle.AutoSize = true;
+            this.lblNodeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNodeTitle.Location = new System.Drawing.Point(34, 16);
+            this.lblNodeTitle.Name = "lblNodeTitle";
+            this.lblNodeTitle.Size = new System.Drawing.Size(275, 31);
+            this.lblNodeTitle.TabIndex = 0;
+            this.lblNodeTitle.Text = "Bitcoin Node Explorer";
             // 
             // LeftPanel
             // 
             this.LeftPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LeftPanel.Controls.Add(this.btnConfig);
             this.LeftPanel.Controls.Add(this.panel1);
             this.LeftPanel.Controls.Add(this.btnChange);
             this.LeftPanel.Controls.Add(this.btnMempool);
@@ -110,8 +112,7 @@
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(170, 45);
             this.btnChange.TabIndex = 6;
-            this.btnChange.Text = "___Block Bericht";
-            this.btnChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChange.Text = "Block report";
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
@@ -122,8 +123,7 @@
             this.btnMempool.Name = "btnMempool";
             this.btnMempool.Size = new System.Drawing.Size(170, 45);
             this.btnMempool.TabIndex = 5;
-            this.btnMempool.Text = "___Mempool Bericht";
-            this.btnMempool.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMempool.Text = "Mempool report";
             this.btnMempool.UseVisualStyleBackColor = true;
             this.btnMempool.Click += new System.EventHandler(this.btnFees_Click);
             // 
@@ -134,8 +134,7 @@
             this.btnBlocksuche.Name = "btnBlocksuche";
             this.btnBlocksuche.Size = new System.Drawing.Size(170, 45);
             this.btnBlocksuche.TabIndex = 4;
-            this.btnBlocksuche.Text = "___Blocksuche";
-            this.btnBlocksuche.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBlocksuche.Text = "Block search";
             this.btnBlocksuche.UseVisualStyleBackColor = true;
             this.btnBlocksuche.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -146,8 +145,7 @@
             this.btnHardware.Name = "btnHardware";
             this.btnHardware.Size = new System.Drawing.Size(170, 45);
             this.btnHardware.TabIndex = 3;
-            this.btnHardware.Text = "___Hardware Details";
-            this.btnHardware.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHardware.Text = "Hardware Details";
             this.btnHardware.UseVisualStyleBackColor = true;
             this.btnHardware.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -179,6 +177,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
+            // btnConfig
+            // 
+            this.btnConfig.Location = new System.Drawing.Point(12, 505);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(170, 41);
+            this.btnConfig.TabIndex = 7;
+            this.btnConfig.Text = "⚙  Configurations";
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // userControl21
             // 
             this.userControl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
@@ -198,7 +206,7 @@
             // 
             // page21
             // 
-            this.page21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.page21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.page21.Location = new System.Drawing.Point(191, 68);
             this.page21.Name = "page21";
             this.page21.Size = new System.Drawing.Size(742, 558);
@@ -247,7 +255,7 @@
 
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Panel LeftPanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNodeTitle;
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnMempool;
         private System.Windows.Forms.Button btnBlocksuche;
@@ -262,6 +270,7 @@
         private Page2 page21;
         private UserControl3 userControl31;
         private UserControl2 userControl21;
+        private System.Windows.Forms.Button btnConfig;
     }
 }
 

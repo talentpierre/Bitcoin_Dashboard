@@ -117,12 +117,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitcoinToolbox.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="design.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCredenitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCredenitals.Designer.cs">
+      <DependentUpon>FormCredenitals.cs</DependentUpon>
     </Compile>
     <Compile Include="Page2.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +161,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCredenitals.aa.resx">
+      <DependentUpon>FormCredenitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCredenitals.resx">
+      <DependentUpon>FormCredenitals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page2.resx">
       <DependentUpon>Page2.cs</DependentUpon>
