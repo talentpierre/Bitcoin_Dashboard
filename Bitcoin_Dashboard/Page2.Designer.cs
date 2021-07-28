@@ -53,7 +53,7 @@
             this.lblTemp.AutoSize = true;
             this.lblTemp.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTemp.ForeColor = System.Drawing.Color.White;
-            this.lblTemp.Location = new System.Drawing.Point(224, 94);
+            this.lblTemp.Location = new System.Drawing.Point(224, 105);
             this.lblTemp.Name = "lblTemp";
             this.lblTemp.Size = new System.Drawing.Size(32, 17);
             this.lblTemp.TabIndex = 1;
@@ -73,11 +73,11 @@
             // lblTemperatur
             // 
             this.lblTemperatur.AutoSize = true;
-            this.lblTemperatur.Location = new System.Drawing.Point(47, 98);
+            this.lblTemperatur.Location = new System.Drawing.Point(47, 109);
             this.lblTemperatur.Name = "lblTemperatur";
-            this.lblTemperatur.Size = new System.Drawing.Size(64, 13);
+            this.lblTemperatur.Size = new System.Drawing.Size(70, 13);
             this.lblTemperatur.TabIndex = 3;
-            this.lblTemperatur.Text = "Temperatur:";
+            this.lblTemperatur.Text = "Temperature:";
             this.lblTemperatur.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCpuTakt
@@ -85,9 +85,9 @@
             this.lblCpuTakt.AutoSize = true;
             this.lblCpuTakt.Location = new System.Drawing.Point(47, 157);
             this.lblCpuTakt.Name = "lblCpuTakt";
-            this.lblCpuTakt.Size = new System.Drawing.Size(54, 13);
+            this.lblCpuTakt.Size = new System.Drawing.Size(59, 13);
             this.lblCpuTakt.TabIndex = 4;
-            this.lblCpuTakt.Text = "CPU-Takt";
+            this.lblCpuTakt.Text = "CPU-Clock";
             // 
             // lblModel
             // 
@@ -103,9 +103,9 @@
             this.SystemState.AutoSize = true;
             this.SystemState.Location = new System.Drawing.Point(47, 200);
             this.SystemState.Name = "SystemState";
-            this.SystemState.Size = new System.Drawing.Size(75, 13);
+            this.SystemState.Size = new System.Drawing.Size(70, 13);
             this.SystemState.TabIndex = 6;
-            this.SystemState.Text = "System status:";
+            this.SystemState.Text = "System state:";
             // 
             // lblSystemstate
             // 

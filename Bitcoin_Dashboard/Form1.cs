@@ -29,42 +29,49 @@ namespace Bitcoin_Dashboard
         {
             this.BackColor = Color.FromArgb(44, 43, 60);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            TopPanel.BackColor = Color.FromArgb(76, 75, 105);
+            TopPanel.BackColor = design.pnlBackColor;
             LeftPanel.BackColor = Color.FromArgb(50, 49, 65);
-            
-            btnHardware.BackColor = Color.FromArgb(50, 49, 65);
-            btnHardware.ForeColor = Color.White;
-            btnHardware.FlatStyle = FlatStyle.Flat;
+
+            lblNodeTitle.Font = design.fntTitle;
+            lblNodeTitle.ForeColor = design.lblForeColor;
+
+            btnHardware.BackColor = design.form1BtnBackColor;
+            btnHardware.ForeColor = design.btnForeColor;
+            btnHardware.FlatStyle = design.btnFlatstyle;
             btnHardware.FlatAppearance.BorderSize = 0;
 
-            btnBlocksuche.BackColor = Color.FromArgb(50, 49, 65);
-            btnBlocksuche.ForeColor = Color.White;
-            btnBlocksuche.FlatStyle = FlatStyle.Flat;
+            btnBlocksuche.BackColor = design.form1BtnBackColor;
+            btnBlocksuche.ForeColor = design.btnForeColor;
+            btnBlocksuche.FlatStyle = design.btnFlatstyle;
             btnBlocksuche.FlatAppearance.BorderSize = 0;
 
-            btnMempool.BackColor = Color.FromArgb(50, 49, 65);
-            btnMempool.ForeColor = Color.White;
-            btnMempool.FlatStyle = FlatStyle.Flat;
+            btnMempool.BackColor = design.form1BtnBackColor;
+            btnMempool.ForeColor = design.btnForeColor;
+            btnMempool.FlatStyle = design.btnFlatstyle;
             btnMempool.FlatAppearance.BorderSize = 0;
 
-            btnChange.BackColor = Color.FromArgb(50, 49, 65);
-            btnChange.ForeColor = Color.White;
-            btnChange.FlatStyle = FlatStyle.Flat;
+            btnChange.BackColor = design.form1BtnBackColor;
+            btnChange.ForeColor = design.btnForeColor;
+            btnChange.FlatStyle = design.btnFlatstyle;
             btnChange.FlatAppearance.BorderSize = 0;
 
             button5.BackColor = Color.FromArgb(76, 75, 105);
             button5.ForeColor = Color.White;
             button5.FlatStyle = FlatStyle.Flat;
             button5.FlatAppearance.BorderSize = 0;
-            
-            BitcoinToolbox.InitializeRPC();
-            
+
+            btnConfig.Font = design.font;
+            btnConfig.BackColor = design.btnBackColor;
+            btnConfig.ForeColor = design.btnForeColor;
+            btnConfig.FlatStyle = design.btnFlatstyle;
+            btnConfig.FlatAppearance.BorderSize = 0;
+
+            Config.InitConfig();            
 
             userControl11.Hide();
             userControl21.Hide();
             userControl31.Hide();
 
-            PiHardware.InitializePi();
             
         }
 
@@ -145,6 +152,12 @@ namespace Bitcoin_Dashboard
         private void userControl21_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormCredenitals formcreds = new FormCredenitals();
+            formcreds.Show();
         }
     }
 }

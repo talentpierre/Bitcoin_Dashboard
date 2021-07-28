@@ -16,56 +16,15 @@ namespace Bitcoin_Dashboard
         private static string userName;
         private static string passwd;
         private static string sshHost;
-        private static bool exist = true;
 
         static SshClient sshc;
 
         public static void InitializePi()
         {
-            if (Directory.Exists("credentials/ssh/") == false)
-            {
-                Directory.CreateDirectory("credentials/ssh/");
-                exist = false;
-            }
-            if (File.Exists("credentials/ssh/sshUser.txt") == false)
-            {
-                File.Create("credentials/ssh/sshUser.txt");
-                exist = false;
-            }
-            if (File.Exists("credentials/ssh/sshHost.txt") == false)
-            {
-                File.Create("credentials/ssh/sshHost.txt");
-                exist = false;
-            }
-            if (File.Exists("credentials/ssh/sshPasswd.txt") == false)
-            {
-                File.Create("credentials/ssh/sshPasswd.txt");
-                exist = false;
-            }
 
-            if (exist == false)
-            {
-                MessageBox.Show("Bitte gib deine SSH Daten im credentials Ordner ein");
-               Thread.Sleep(1200);
-                Application.Exit();
-                Environment.Exit(0);
-            }
-
-            Thread.Sleep(1200);
-
-            userName = File.ReadAllText("credentials/ssh/sshUser.txt");
-            sshHost = File.ReadAllText("credentials/ssh/sshHost.txt");
-            passwd = File.ReadAllText("credentials/ssh/sshPasswd.txt");
-
-            if (userName == null || passwd == null || sshHost == null)
-            {
-                MessageBox.Show("Bitte gib deine SSH Daten im credentials Ordner ein");
-                Console.WriteLine("Credentials needed");
-                Thread.Sleep(1200);
-                Application.Exit();
-                Environment.Exit(0);
-            }
-
+            userName = Config.GetSshUser();
+            sshHost = Config.GetSshHost();
+            passwd = Config.GetSshPasswd();
 
         }
 
@@ -142,16 +101,16 @@ namespace Bitcoin_Dashboard
                     hr = "OK";
                     break;
                 case "0x1":
-                    hr = "Unterspannung erkannt";
+                    hr = "Under-voltage detcted";
                     break;
                 case "0x2":
-                    hr = "CPU Taktfrequnz gekappt (Überhitzungsschutz)";
+                    hr = "Arm frequency capped";
                     break;
                 case "0x4":
-                    hr = "CPU ist gedrosselt";
+                    hr = "Currently throttled";
                     break;
                 case "0x8":
-                    hr = "Temperatur limitierung ist aktiv";
+                    hr = "Soft temperature limit active";
                     break;
            
                 default:
