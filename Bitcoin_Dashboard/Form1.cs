@@ -16,7 +16,8 @@ namespace Bitcoin_Dashboard
 {
     public partial class MainWindow : Form
     {
-        //https://www.codeproject.com/articles/11114/move-window-form-without-titlebar-in-c
+        private bool dragging = false;
+        private Point startpoint = new Point(0, 0);
 
         public MainWindow()
         {
@@ -158,6 +159,26 @@ namespace Bitcoin_Dashboard
         {
             FormCredenitals formcreds = new FormCredenitals();
             formcreds.Show();
+        }
+
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startpoint = new Point(e.X, e.Y);
+        }
+
+        private void TopPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.startpoint.X, p.Y - this.startpoint.Y);
+            }
         }
     }
 }
