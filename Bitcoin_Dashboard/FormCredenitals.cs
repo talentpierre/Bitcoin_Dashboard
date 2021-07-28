@@ -12,6 +12,8 @@ namespace Bitcoin_Dashboard
 {
     public partial class FormCredenitals : Form
     {
+        private bool dragging = false;
+        private Point startpoint = new Point(0, 0);
         public FormCredenitals()
         {
             InitializeComponent();
@@ -90,6 +92,29 @@ namespace Bitcoin_Dashboard
 
         }
 
+        private void PanelConfig_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startpoint = new Point(e.X, e.Y);
+        }
 
+        private void PanelConfig_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void PanelConfig_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X-this.startpoint.X, p.Y-this.startpoint.Y);
+            }
+        }
+
+        private void FormCredenitals_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

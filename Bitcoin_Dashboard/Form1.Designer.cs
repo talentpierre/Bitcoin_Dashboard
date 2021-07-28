@@ -32,6 +32,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.lblNodeTitle = new System.Windows.Forms.Label();
             this.LeftPanel = new System.Windows.Forms.Panel();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnChange = new System.Windows.Forms.Button();
             this.btnMempool = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnConfig = new System.Windows.Forms.Button();
             this.userControl21 = new Bitcoin_Dashboard.UserControl2();
             this.userControl31 = new Bitcoin_Dashboard.UserControl3();
             this.page21 = new Bitcoin_Dashboard.Page2();
@@ -60,6 +60,9 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(933, 68);
             this.TopPanel.TabIndex = 0;
+            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
+            this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
+            this.TopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseUp);
             // 
             // button5
             // 
@@ -97,6 +100,16 @@
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(190, 558);
             this.LeftPanel.TabIndex = 1;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.Location = new System.Drawing.Point(12, 505);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(170, 41);
+            this.btnConfig.TabIndex = 7;
+            this.btnConfig.Text = "⚙  Configurations";
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel1
             // 
@@ -176,16 +189,6 @@
             this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.Location = new System.Drawing.Point(12, 505);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(170, 41);
-            this.btnConfig.TabIndex = 7;
-            this.btnConfig.Text = "⚙  Configurations";
-            this.btnConfig.UseVisualStyleBackColor = true;
-            this.btnConfig.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // userControl21
             // 

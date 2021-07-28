@@ -139,6 +139,9 @@ namespace Bitcoin_Dashboard
             resources.ApplyResources(this.pnlTopPanel, "pnlTopPanel");
             this.pnlTopPanel.Name = "pnlTopPanel";
             this.pnlTopPanel.Tag = "";
+            this.pnlTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelConfig_MouseDown);
+            this.pnlTopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelConfig_MouseMove);
+            this.pnlTopPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelConfig_MouseUp);
             // 
             // lblConfiguration
             // 
@@ -164,10 +167,11 @@ namespace Bitcoin_Dashboard
             this.Controls.Add(this.lblUserSSH);
             this.Controls.Add(this.lblHostSSH);
             this.Controls.Add(this.pnlTopPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCredenitals";
             this.Opacity = 0.98D;
             this.Load += new System.EventHandler(this.FormCredenitals_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormCredenitals_MouseDown);
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlTopPanel.PerformLayout();
             this.ResumeLayout(false);
