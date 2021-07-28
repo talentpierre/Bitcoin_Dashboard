@@ -58,7 +58,7 @@
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(933, 68);
+            this.TopPanel.Size = new System.Drawing.Size(1053, 68);
             this.TopPanel.TabIndex = 0;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
@@ -67,7 +67,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(877, 16);
+            this.button5.Location = new System.Drawing.Point(996, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(35, 35);
             this.button5.TabIndex = 1;
@@ -98,12 +98,12 @@
             this.LeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftPanel.Location = new System.Drawing.Point(0, 68);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(190, 558);
+            this.LeftPanel.Size = new System.Drawing.Size(190, 651);
             this.LeftPanel.TabIndex = 1;
             // 
             // btnConfig
             // 
-            this.btnConfig.Location = new System.Drawing.Point(12, 505);
+            this.btnConfig.Location = new System.Drawing.Point(12, 588);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(170, 41);
             this.btnConfig.TabIndex = 7;
@@ -195,24 +195,24 @@
             this.userControl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.userControl21.Location = new System.Drawing.Point(191, 68);
             this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(742, 558);
+            this.userControl21.Size = new System.Drawing.Size(865, 641);
             this.userControl21.TabIndex = 7;
             this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
             // 
             // userControl31
             // 
             this.userControl31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.userControl31.Location = new System.Drawing.Point(191, 68);
+            this.userControl31.Location = new System.Drawing.Point(188, 71);
             this.userControl31.Name = "userControl31";
-            this.userControl31.Size = new System.Drawing.Size(742, 558);
+            this.userControl31.Size = new System.Drawing.Size(865, 635);
             this.userControl31.TabIndex = 6;
             // 
             // page21
             // 
             this.page21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.page21.Location = new System.Drawing.Point(191, 68);
+            this.page21.Location = new System.Drawing.Point(188, 68);
             this.page21.Name = "page21";
-            this.page21.Size = new System.Drawing.Size(742, 558);
+            this.page21.Size = new System.Drawing.Size(868, 641);
             this.page21.TabIndex = 5;
             // 
             // userControl11
@@ -221,7 +221,7 @@
             this.userControl11.Location = new System.Drawing.Point(191, 68);
             this.userControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(742, 558);
+            this.userControl11.Size = new System.Drawing.Size(859, 638);
             this.userControl11.TabIndex = 4;
             // 
             // MainWindow
@@ -229,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(933, 626);
+            this.ClientSize = new System.Drawing.Size(1053, 719);
             this.ControlBox = false;
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.userControl31);

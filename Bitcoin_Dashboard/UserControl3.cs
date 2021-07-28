@@ -102,6 +102,37 @@ namespace Bitcoin_Dashboard
             chart1.Series["Inputs"].Points.AddXY("10", inputAnzahl[10]);
             chart1.Series["Inputs"].Points.AddXY("> 10", inputAnzahl[11]);
 
+            fillTable();
+
+        }
+
+        private void fillTable()
+        {
+            lbl_s3_c2.Text = Convert.ToString(outputAnzahl[0]);
+            lbl_s3_c3.Text = Convert.ToString(outputAnzahl[1]);
+            lbl_s3_c4.Text = Convert.ToString(outputAnzahl[2]);
+            lbl_s3_c5.Text = Convert.ToString(outputAnzahl[3]);
+            lbl_s3_c6.Text = Convert.ToString(outputAnzahl[4]);
+            lbl_s3_c7.Text = Convert.ToString(outputAnzahl[5]);
+            lbl_s3_c8.Text = Convert.ToString(outputAnzahl[6]);
+            lbl_s3_c9.Text = Convert.ToString(outputAnzahl[7]);
+            lbl_s3_c10.Text = Convert.ToString(outputAnzahl[8]);
+            lbl_s3_c11.Text = Convert.ToString(outputAnzahl[9]);
+            lbl_s3_c12.Text = Convert.ToString(outputAnzahl[10]);
+            lbl_s3_c13.Text = Convert.ToString(outputAnzahl[11]);
+
+            lbl_s2_c2.Text = Convert.ToString(inputAnzahl[0]);
+            lbl_s2_c3.Text = Convert.ToString(inputAnzahl[1]);
+            lbl_s2_c4.Text = Convert.ToString(inputAnzahl[2]);
+            lbl_s2_c5.Text = Convert.ToString(inputAnzahl[3]);
+            lbl_s2_c6.Text = Convert.ToString(inputAnzahl[4]);
+            lbl_s2_c7.Text = Convert.ToString(inputAnzahl[5]);
+            lbl_s2_c8.Text = Convert.ToString(inputAnzahl[6]);
+            lbl_s2_c9.Text = Convert.ToString(inputAnzahl[7]);
+            lbl_s2_c10.Text = Convert.ToString(inputAnzahl[8]);
+            lbl_s2_c11.Text = Convert.ToString(inputAnzahl[9]);
+            lbl_s2_c12.Text = Convert.ToString(inputAnzahl[10]);
+            lbl_s2_c13.Text = Convert.ToString(inputAnzahl[11]);
         }
 
         public void analyzeTransactions(int height)
@@ -236,6 +267,16 @@ namespace Bitcoin_Dashboard
         private void UserControl3_VisibleChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

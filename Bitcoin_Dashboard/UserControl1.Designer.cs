@@ -324,7 +324,7 @@
             this.Controls.Add(this.lblBlockchain);
             this.Controls.Add(this.button2);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(670, 439);
+            this.Size = new System.Drawing.Size(742, 558);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

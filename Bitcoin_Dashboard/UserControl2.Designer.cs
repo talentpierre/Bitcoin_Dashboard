@@ -177,7 +177,7 @@ namespace Bitcoin_Dashboard
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMempoolBericht);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(670, 439);
+            this.Size = new System.Drawing.Size(742, 558);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
