@@ -47,6 +47,7 @@ namespace Bitcoin_Dashboard
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlTopPanel = new System.Windows.Forms.Panel();
             this.lblConfiguration = new System.Windows.Forms.Label();
+            this.chxSsh = new System.Windows.Forms.CheckBox();
             this.pnlTopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,10 +150,19 @@ namespace Bitcoin_Dashboard
             this.lblConfiguration.Name = "lblConfiguration";
             this.lblConfiguration.Click += new System.EventHandler(this.label2_Click);
             // 
+            // chxSsh
+            // 
+            resources.ApplyResources(this.chxSsh, "chxSsh");
+            this.chxSsh.Checked = true;
+            this.chxSsh.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chxSsh.Name = "chxSsh";
+            this.chxSsh.UseVisualStyleBackColor = true;
+            // 
             // FormCredenitals
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chxSsh);
             this.Controls.Add(this.btnSaveConf);
             this.Controls.Add(this.tbxRpcPasswd);
             this.Controls.Add(this.tbxRpcUser);
@@ -197,5 +207,6 @@ namespace Bitcoin_Dashboard
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlTopPanel;
         private System.Windows.Forms.Label lblConfiguration;
+        private System.Windows.Forms.CheckBox chxSsh;
     }
 }

@@ -14,8 +14,9 @@ namespace Bitcoin_Dashboard
         static string configFile = @"\credentials.conf";
         static string conf = configPath + configFile;
 
-        
+
         //ssh
+        public static bool sshState = true;
         public static string sshHost = string.Empty;
         public static string sshUser = string.Empty;
         public static string sshPasswd = string.Empty;
@@ -58,23 +59,60 @@ namespace Bitcoin_Dashboard
                 WelcomeMsg = "Please input your informations";
                 formCredentials.Show();
             }
-            else if (GetSshHost() == "" || GetSshPasswd() == "" || GetSshUser() == "" || GetRpcHost() == "" || GetRpcUser() == "" || GetSshPasswd() == "")
+            else if (GetSshEnabled() == true)
             {
-                Bitcoin_Dashboard.FormCredenitals formCredentials = new Bitcoin_Dashboard.FormCredenitals();
-                WelcomeMsg = "Please input your informations";
-                formCredentials.Show();
-            }
-            else
-            {
-                PiHardware.InitializePi();
-                BitcoinToolbox.InitializeRPC();
-            }
+                if (GetSshHost() == "" || GetSshPasswd() == "" || GetSshUser() == "" || GetRpcHost() == "" || GetRpcUser() == "" || GetRpcPasswd() == "")
+                {
+                    Bitcoin_Dashboard.FormCredenitals formCredentials = new Bitcoin_Dashboard.FormCredenitals();
+                    WelcomeMsg = "Please input your informations";
+                    formCredentials.Show();
 
-            
+                }
+                else
+                {
+                    PiHardware.InitializePi();
+                    BitcoinToolbox.InitializeRPC();
+                }
+            }
+            else if (GetSshEnabled() == false)
+            {
+                if (GetRpcHost() == "" || GetRpcUser() == "" || GetRpcPasswd() == "")
+                {
+                    Bitcoin_Dashboard.FormCredenitals formCredentials = new Bitcoin_Dashboard.FormCredenitals();
+                    WelcomeMsg = "Please input your informations";
+                    formCredentials.Show();
+
+                }
+                else
+                {
+                    PiHardware.InitializePi();
+                    BitcoinToolbox.InitializeRPC();
+                }
+            }
             
         }
 
+        public static bool GetSshEnabled()
+        {
+            cfgReader = new StreamReader(conf);
 
+            while (!cfgReader.EndOfStream)
+            {
+                string arg = cfgReader.ReadLine().ToString();
+                if (arg.Contains("[SSH]"))
+                {
+
+                    sshState = true;
+                }
+                else if (arg.Contains("[!SSH]"))
+                {
+                    sshState = false;
+                }
+            }
+            cfgReader.Close();
+            return sshState;
+        }
+        
         public static string GetSshHost()
         {
             cfgReader = new StreamReader(conf);
@@ -195,10 +233,17 @@ namespace Bitcoin_Dashboard
             return rpcCredentials;
         }
 
-        public static void SetConfig(string sshHost, string sshUser, string sshPassword, string rpcHost, string rpcUser, string rpcPassword)
+        public static void SetConfig(bool ssh, string sshHost, string sshUser, string sshPassword, string rpcHost, string rpcUser, string rpcPassword)
         {
             StreamWriter cfgCreate = new StreamWriter(conf);
-            cfgCreate.WriteLine("[SSH]");
+            if (ssh == false)
+            {
+                cfgCreate.WriteLine("[!SSH]");
+            }
+            else if (ssh == true)
+            {
+                cfgCreate.WriteLine("[SSH]");
+            }
             cfgCreate.WriteLine("SSH Host=" + sshHost);
             cfgCreate.WriteLine("SSH User=" + sshUser);
             cfgCreate.WriteLine("SSH Password=" + sshPassword);

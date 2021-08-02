@@ -30,8 +30,9 @@ namespace Bitcoin_Dashboard
 
         public static void SshConnect()
         {
-            sshc = new SshClient(sshHost, userName, passwd);
-            sshc.Connect();
+                sshc = new SshClient(sshHost, userName, passwd);
+                sshc.Connect();
+            
         }
 
         public static void SshDisconnect()
