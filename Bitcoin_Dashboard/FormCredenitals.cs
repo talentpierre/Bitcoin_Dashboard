@@ -64,6 +64,7 @@ namespace Bitcoin_Dashboard
             tbxRpcPasswd.ForeColor = design.tbxLightForeColor;
 
             lblWelcomeConf.Text = Config.WelcomeMsg;
+            chxSsh.Checked = Config.GetSshEnabled();
             tbxSshHost.Text = Config.GetSshHost();
             tbxSshUser.Text = Config.GetSshUser();
             tbxSshPasswd.Text = Config.GetSshPasswd();
@@ -74,7 +75,7 @@ namespace Bitcoin_Dashboard
 
         private void btnSaveConf_Click(object sender, EventArgs e)
         {
-            Config.SetConfig(tbxSshHost.Text, tbxSshUser.Text, tbxSshPasswd.Text, tbxRpcHost.Text, tbxRpcUser.Text, tbxRpcPasswd.Text);
+            Config.SetConfig(chxSsh.Checked ,tbxSshHost.Text, tbxSshUser.Text, tbxSshPasswd.Text, tbxRpcHost.Text, tbxRpcUser.Text, tbxRpcPasswd.Text);
             if (lblWelcomeConf.Text == "Please input your informations")
             {
                 PiHardware.InitializePi();

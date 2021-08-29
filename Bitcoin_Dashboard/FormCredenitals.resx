@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblHostSSH.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lblUserSSH.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUserSSH.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -198,7 +198,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="lblHostRPC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -225,7 +225,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblHostRPC.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="lblUserRPC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -252,7 +252,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUserRPC.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lblPasswordRPC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -279,7 +279,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPasswordRPC.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="tbxSshHost.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 81</value>
@@ -300,7 +300,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbxSshHost.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="tbxSshUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 117</value>
@@ -321,7 +321,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbxSshUser.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tbxSshPasswd.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 160</value>
@@ -342,7 +342,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbxSshPasswd.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tbxRpcHost.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 203</value>
@@ -363,7 +363,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbxRpcHost.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tbxRpcUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 248</value>
@@ -384,7 +384,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbxRpcUser.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tbxRpcPasswd.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 285</value>
@@ -405,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbxRpcPasswd.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblWelcomeConf.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -457,7 +457,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSaveConf.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnClose.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -485,24 +485,6 @@
   </data>
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="lblConfiguration.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblConfiguration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblConfiguration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 14</value>
-  </data>
-  <data name="lblConfiguration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="lblConfiguration.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="lblConfiguration.Text" xml:space="preserve">
-    <value>Configuration</value>
   </data>
   <data name="&gt;&gt;lblConfiguration.Name" xml:space="preserve">
     <value>lblConfiguration</value>
@@ -535,7 +517,64 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlTopPanel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
+  </data>
+  <data name="lblConfiguration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblConfiguration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblConfiguration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 14</value>
+  </data>
+  <data name="lblConfiguration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="lblConfiguration.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lblConfiguration.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguration.Name" xml:space="preserve">
+    <value>lblConfiguration</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguration.Parent" xml:space="preserve">
+    <value>pnlTopPanel</value>
+  </data>
+  <data name="&gt;&gt;lblConfiguration.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chxSsh.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chxSsh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 88</value>
+  </data>
+  <data name="chxSsh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="chxSsh.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="chxSsh.Text" xml:space="preserve">
+    <value>SSH</value>
+  </data>
+  <data name="&gt;&gt;chxSsh.Name" xml:space="preserve">
+    <value>chxSsh</value>
+  </data>
+  <data name="&gt;&gt;chxSsh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chxSsh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chxSsh.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
